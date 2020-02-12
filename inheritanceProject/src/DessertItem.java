@@ -1,6 +1,7 @@
 public abstract class DessertItem {
 
     protected String name;
+    private double calories;
 
     /**
      * Null constructor for DessertItem class
@@ -27,4 +28,11 @@ public abstract class DessertItem {
      */
     public abstract double getCost();
 
+    public void setCalories(double calories) {
+        this.calories = calories;
+    }
+
+    public double getCalories() {
+        return calories;
+    }
 }

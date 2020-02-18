@@ -1,3 +1,5 @@
+//Checkout class to print receipt and stuff
+
 import java.util.ArrayList;
 
 public class Checkout {
@@ -44,6 +46,4 @@ public class Checkout {
             total = total + item.getCost();
         }
     }*/
-
-
 }

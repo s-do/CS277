@@ -1,6 +1,6 @@
 public class Cookie extends DessertItem {
     private int amount;
-    private double pricePerC = 0.50;
+    private double pricePerDozen = 50;
 
 
     public Cookie() {
@@ -10,20 +10,19 @@ public class Cookie extends DessertItem {
 
     //A customize constructor to create a type of cookie of this class
     //Price and calories are hard coded when the object is created
-    public Cookie(String user_name, int user_amount, int calories, double pricePerC) {
+    public Cookie(String user_name, int user_amount, int calories, double pricePerDozen) {
         super(user_name);
         amount = user_amount;
         this.calories = calories;
-        this.pricePerC = pricePerC;
+        this.pricePerDozen = pricePerDozen;
 
     }
 
-    //calculate price by amount of cookies.
+    //calculate price by amount of cookies
+    //return cost in dollars (like $3.54)
     @Override
     public double getCost() {
-        int costCent = (int) Math.round(amount * pricePerC);
-        double costDollar = costCent / 100.0;
-        return costDollar;
+        return Math.round(amount * pricePerDozen * 100.0) / 100.0 ;
     }
 
     public String toString() {

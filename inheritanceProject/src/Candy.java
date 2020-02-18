@@ -2,7 +2,7 @@ import javax.xml.namespace.QName;
 
 public class Candy extends DessertItem{
     private double weight;
-    private double pricePerLB = 0.25;
+    private double pricePerLB = 25;
     // double caloriesLb = 10;
 
     public Candy() {
@@ -24,9 +24,7 @@ public class Candy extends DessertItem{
     @Override
     public double getCost() {
         //cost is calculated by weight * price
-        int costCent = (int) Math.round(weight * pricePerLB);
-        double costDollar = costCent / 100.0;
-        return costDollar;
+        return Math.round(weight * pricePerLB * 100.0) / 100.0;
     }
 
     public String toString() {

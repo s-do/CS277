@@ -15,7 +15,7 @@ public class Sundae extends IceCream {
     }
 
     public String toString() {
-        return this.name + "(Sundae ) "+ "calories: " + calories + " cost: " + cost;
+        return this.name + "(Sundae ) "+ "calories: " + calories + " cost: " + this.getCost();
     }
 
 

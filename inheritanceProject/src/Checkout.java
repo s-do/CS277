@@ -47,8 +47,7 @@ public class Checkout {
         //total cost will be in cents and without tax
         double total = 0;
         for(DessertItem item : itemList) {
-            //multiply the cost of the item by 100 to convert to cents
-            total = total + (item.getCost() * 100);
+            total = total + (item.getCost());
         }
         //round the total cost to the closet int
         return (int) Math.round(total);

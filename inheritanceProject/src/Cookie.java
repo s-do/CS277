@@ -22,7 +22,7 @@ public class Cookie extends DessertItem {
     //return cost in dollars (like $3.54)
     @Override
     public double getCost() {
-        return Math.round(amount * pricePerDozen * 100.0) / 100.0 ;
+        return Math.round(amount * pricePerDozen * 100.0);
     }
 
     public String toString() {

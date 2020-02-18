@@ -1,4 +1,4 @@
-public abstract class IceCream extends DessertItem {
+public class IceCream extends DessertItem {
 	protected double cost;
 
 	public IceCream() {
@@ -13,7 +13,11 @@ public abstract class IceCream extends DessertItem {
 	}
 
 	public double getCost() {
-		return (int) Math.round(this.cost);
+		return (int) Math.round(this.cost * 100);
+	}
+
+	public int getCalories() {
+		return this.calories;
 	}
 
 	public String toString() {

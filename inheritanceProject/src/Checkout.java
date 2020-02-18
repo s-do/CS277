@@ -11,7 +11,9 @@ public class Checkout {
         this.taxRate = 0.1;
     }
 
+    //Constructor with tax rate in the parameter
     public Checkout(double taxRate) {
+        itemList = new ArrayList<DessertItem>();
         this.taxRate = taxRate;
     }
 
@@ -40,10 +42,22 @@ public class Checkout {
         itemList.clear();
     }
 
-/*    public int totalCost() {
-        int total = 0;
+    //totalCost() return the total in cents
+    public int totalCost() {
+        //total cost will be in cents and without tax
+        double total = 0;
         for(DessertItem item : itemList) {
-            total = total + item.getCost();
+            //multiply the cost of the item by 100 to convert to cents
+            total = total + (item.getCost() * 100);
         }
-    }*/
+        //round the total cost to the closet int
+        return (int) Math.round(total);
+    }
+
+    //return the total tax in cents
+    public int totalTax() {
+        int total_cost = this.totalCost();
+        //round the total tax amount to the closet int
+        return (int) (Math.round(total_cost * taxRate));
+    }
 }

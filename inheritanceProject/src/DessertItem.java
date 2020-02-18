@@ -30,7 +30,6 @@ public abstract class DessertItem {
 
     //added calories methods
     public void setCalories(int calories) {
-
         this.calories = calories;
     }
 

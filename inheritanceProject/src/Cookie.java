@@ -1,6 +1,6 @@
 public class Cookie extends DessertItem {
     private int amount;
-    private double pricePerDozen = 50;
+    private double pricePerDozen = 0.50;
 
 
     public Cookie() {
@@ -10,11 +10,11 @@ public class Cookie extends DessertItem {
 
     //A customize constructor to create a type of cookie of this class
     //Price and calories are hard coded when the object is created
-    public Cookie(String user_name, int user_amount, int calories, double pricePerDozen) {
-        super(user_name);
+    public Cookie(String flavor, int user_amount, int Calories, double PricePerDozen) {
+        super(flavor);
         amount = user_amount;
-        this.calories = calories;
-        this.pricePerDozen = pricePerDozen;
+        this.calories = Calories;
+        this.pricePerDozen = PricePerDozen;
 
     }
 

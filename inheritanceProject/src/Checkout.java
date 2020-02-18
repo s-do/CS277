@@ -43,20 +43,20 @@ public class Checkout {
     }
 
     //totalCost() return the total in cents
-    public int totalCost() {
+    public double totalCost() {
         //total cost will be in cents and without tax
         double total = 0;
         for(DessertItem item : itemList) {
             total = total + (item.getCost());
         }
         //round the total cost to the closet int
-        return (int) Math.round(total);
+        return Math.round(total * 100.0) / 100.0;
     }
 
     //return the total tax in cents
-    public int totalTax() {
-        int total_cost = this.totalCost();
+    public double totalTax() {
+        double total_cost = this.totalCost();
         //round the total tax amount to the closet int
-        return (int) (Math.round(total_cost * taxRate));
+        return Math.round(total_cost * taxRate * 100.0) / 100.0;
     }
 }

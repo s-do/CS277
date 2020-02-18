@@ -13,7 +13,7 @@ public class IceCream extends DessertItem {
 	}
 
 	public double getCost() {
-		return (int) Math.round(this.cost * 100);
+		return Math.round(this.cost * 100) / 100.0;
 	}
 
 	public int getCalories() {

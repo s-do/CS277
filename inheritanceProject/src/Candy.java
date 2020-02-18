@@ -29,7 +29,7 @@ public class Candy extends DessertItem{
 
     public double getCost() {
         //cost is calculated by weight * price
-        return (int) (Math.round(weight * pricePerLB * 100.0));
+        return Math.round(weight * pricePerLB * 100.0) / 100.0;
     }
 
     public String toString() {

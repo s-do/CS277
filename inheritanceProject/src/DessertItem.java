@@ -1,4 +1,6 @@
-public abstract class DessertItem {
+import javax.management.DescriptorAccess;
+
+public abstract class DessertItem implements Comparable {
 
     protected String name;
     protected int calories;
@@ -35,5 +37,21 @@ public abstract class DessertItem {
 
     public int getCalories() {
         return calories;
+    }
+
+    @Override
+    public int compareTo(Object item){
+        if (item instanceof DessertItem) {
+            if (this.getCalories() > ((DessertItem) item).getCalories()) {
+                return 1;
+            } else if (this.getCalories() < ((DessertItem) item).getCalories()) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }
+        else {
+            return 0;
+        }
     }
 }

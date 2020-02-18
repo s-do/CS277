@@ -1,5 +1,5 @@
 public class IceCream extends DessertItem {
-	protected double cost;
+	 private double cost;
 
 	public IceCream() {
 		super();

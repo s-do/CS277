@@ -29,6 +29,8 @@ public class tester {
         System.out.println("this is the total cost of all items: " + sweetStuff.totalCost());
         System.out.println("this is the amount of tax: " + sweetStuff.totalTax());
 
+        System.out.println("result: " + chocolatechips.compareTo(vanilla));
+
 /*        double test = 5.9;
         int test2 = (int) Math.round(5.9);
         System.out.println("this is cast: " + (int) test);

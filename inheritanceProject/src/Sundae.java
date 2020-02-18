@@ -11,11 +11,11 @@ public class Sundae extends IceCream {
     }
 
     public double getCost() {
-        return (int) Math.round(this.cost * 100);
+        return (int) Math.round(this.getCost() * 100);
     }
 
     public String toString() {
-        return this.name + "(Sundae ) "+ "calories: " + calories + " cost: " + cost;
+        return this.name + "(Sundae ) "+ "calories: " + calories + " cost: " + this.getCost();
     }
 
 

@@ -31,6 +31,14 @@ public class tester {
 
         System.out.println("result: " + chocolatechips.compareTo(vanilla));
 
+        System.out.println("max result " + DessertItem.max(chocolatechips, vanilla));
+
+        System.out.println("before sort: " + sweetStuff);
+        sweetStuff.sort();
+        System.out.println("after sort: " + sweetStuff);
+
+
+
 /*        double test = 5.9;
         int test2 = (int) Math.round(5.9);
         System.out.println("this is cast: " + (int) test);

@@ -1,6 +1,8 @@
 //Checkout class to print receipt and stuff
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Checkout {
     private ArrayList<DessertItem> itemList;
@@ -42,6 +44,11 @@ public class Checkout {
         itemList.clear();
     }
 
+    //sort method for Checkout class
+    public void sort() {
+        Collections.sort(itemList);
+    }
+
     //totalCost() return the total in cents
     public double totalCost() {
         //total cost will be in cents and without tax
@@ -59,4 +66,10 @@ public class Checkout {
         //round the total tax amount to the closet int
         return Math.round(total_cost * taxRate * 100.0) / 100.0;
     }
+
+    //return the arraylist for printing, feel free to change it if you want a different output
+    public String toString() {
+        return "" + itemList;
+    }
+
 }

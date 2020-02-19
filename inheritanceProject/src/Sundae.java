@@ -2,7 +2,8 @@ public class Sundae extends IceCream {
     private String topping;
 
     public Sundae() {
-        super();
+        //super();
+        topping = "";
     }
 
     public Sundae(String flavor, int Calories, double Icecost, String Topping, double topCost) {
@@ -11,13 +12,24 @@ public class Sundae extends IceCream {
         this.topping = Topping;
     }
 
+    public String getTopping() {
+        if (topping == ""){
+            return topping;
+        }
+        return topping + "(Topping) ";
+    }
+
     //get the cost instance variable from the super class.
     public double getCost() {
-        return Math.round(super.getCost() * 100) / 100.0;
+        return Math.round(super.getCost() * 1000.0) / 1000.0;
     }
 
     public String toString() {
-        return this.name + "(Sundae ) "+ "calories: " + calories + " cost: " + this.getCost();
+        //return this.name + "(Sundae ) "+ "calories: " + calories + " cost: " + this.getCost();
+        if (getName() == ""){
+            return "with";
+        }
+        return getName() + "(Sundae) ";
     }
 
 

@@ -21,7 +21,11 @@ public class IceCream extends DessertItem {
 	}
 
 	public String toString() {
-		return this.name + "(IceCream) " + "calories: " + calories + " cost: " + cost;
+		//return this.name + "(IceCream) " + "calories: " + calories + " cost: " + cost;
+		if (cost == 0.0){
+			return getName();
+		}
+		return getName() + "(IceCream) ";
 	}
 
 }

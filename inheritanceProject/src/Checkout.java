@@ -39,6 +39,10 @@ public class Checkout {
         itemList.add(item);
     }
 
+    public DessertItem get(int i){
+        return itemList.get(i);
+    }
+
     //clear the list of items
     public void clear() {
         itemList.clear();
@@ -68,8 +72,10 @@ public class Checkout {
     }
 
     //return the arraylist for printing, feel free to change it if you want a different output
+    // returns the tax and overall cost of receipt
+    // did the printing in the main
     public String toString() {
-        return "" + itemList;
+        return "Tax: " + totalTax() + "\nTotal cost:" + (totalCost() + totalTax());
     }
 
 }

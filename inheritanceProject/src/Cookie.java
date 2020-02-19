@@ -19,15 +19,27 @@ public class Cookie extends DessertItem {
 
     }
 
+    public int getAmount() {
+        return amount;
+    }
+
+    public double getPricePerDozen() {
+        return pricePerDozen;
+    }
+
     //calculate price by amount of cookies
     //return cost in dollars (like $3.54)
     @Override
     public double getCost() {
-        return Math.round(amount * pricePerDozen * 100.0) / 100.0;
+        return Math.round(((amount * pricePerDozen) / 12) * 100.0) / 100.0;
     }
 
     public String toString() {
-        return getName() + "(Cookie) " + "calories: " + getCalories();
+        //return getName() + "(Cookie) " + "calories: " + getCalories();
+        if (amount == 0.0){
+            return getName();
+        }
+        return getName() + "(Cookie) ";
     }
 }
 

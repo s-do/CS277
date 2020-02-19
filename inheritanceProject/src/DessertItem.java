@@ -49,7 +49,6 @@ public abstract class DessertItem implements Comparable {
             } else {
                 return 0;
             }
-    }
 
     //find the larger between the items, return 1 if item1 is larger than item2.
     public static DessertItem max(DessertItem item1, DessertItem item2) {

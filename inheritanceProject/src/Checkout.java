@@ -1,7 +1,6 @@
 //Checkout class to print receipt and stuff
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class Checkout {
@@ -70,8 +69,7 @@ public class Checkout {
         //round the total tax amount to the closet int
         return Math.round(total_cost * taxRate * 100.0) / 100.0;
     }
-
-    //return the arraylist for printing, feel free to change it if you want a different output
+    
     // returns the tax and overall cost of receipt
     // did the printing in the main
     public String toString() {

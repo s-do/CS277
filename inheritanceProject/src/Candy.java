@@ -1,4 +1,4 @@
-import javax.xml.namespace.QName;
+
 
 public class Candy extends DessertItem{
     private double weight;
@@ -29,11 +29,6 @@ public class Candy extends DessertItem{
 
     //orverriding the getCost() methods of the superclass
     @Override
-/*    public double getCost() {
-        //cost is calculated by weight * price
-        return Math.round(weight * pricePerLB * 100.0) / 100.0;
-    }*/
-
     public double getCost() {
         //cost is calculated by weight * price
         return Math.round(weight * pricePerLB * 100.0) / 100.0;

@@ -15,7 +15,7 @@ public class Candy extends DessertItem{
     public Candy(String name, double user_weight, int Calories, double PricePerLB){
         super(name);
         weight = user_weight;
-        this.calories = Calories;
+        super.setCalories(Calories);
         this.pricePerLB = PricePerLB;
     }
 

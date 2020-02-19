@@ -3,7 +3,7 @@ import javax.management.DescriptorAccess;
 public abstract class DessertItem implements Comparable {
 
     protected String name;
-    protected int calories;
+    private int calories;
 
     /**
      * Null constructor for DessertItem class
@@ -17,6 +17,11 @@ public abstract class DessertItem implements Comparable {
     public DessertItem(String name) {
         this.name = name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     /**
      * Returns name of DessertItem
      * @return name of DessertItem

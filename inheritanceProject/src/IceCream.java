@@ -8,7 +8,7 @@ public class IceCream extends DessertItem {
 
 	public IceCream(String flavor, int Calories, double Cost) {
 		super(flavor);
-		this.calories = Calories;
+		super.setCalories(Calories);
 		this.cost = Cost;
 	}
 
@@ -17,7 +17,7 @@ public class IceCream extends DessertItem {
 	}
 
 	public int getCalories() {
-		return this.calories;
+		return super.getCalories();
 	}
 
 	public String toString() {

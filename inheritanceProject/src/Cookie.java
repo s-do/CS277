@@ -14,7 +14,7 @@ public class Cookie extends DessertItem {
     public Cookie(String flavor, int user_amount, int Calories, double PricePerDozen) {
         super(flavor);
         amount = user_amount;
-        this.calories = Calories;
+        super.setCalories(Calories);
         this.pricePerDozen = PricePerDozen;
 
     }

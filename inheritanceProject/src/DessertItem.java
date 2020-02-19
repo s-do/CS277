@@ -41,14 +41,15 @@ public abstract class DessertItem implements Comparable {
 
     //override compareto method.
     @Override
-    public int compareTo(Object item){
-            if (this.getCalories() > ((DessertItem) item).getCalories()) {
-                return 1;
-            } else if (this.getCalories() < ((DessertItem) item).getCalories()) {
-                return -1;
-            } else {
-                return 0;
-            }
+    public int compareTo(Object item) {
+        if (this.getCalories() > ((DessertItem) item).getCalories()) {
+            return 1;
+        } else if (this.getCalories() < ((DessertItem) item).getCalories()) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
 
     //find the larger between the items, return 1 if item1 is larger than item2.
     public static DessertItem max(DessertItem item1, DessertItem item2) {

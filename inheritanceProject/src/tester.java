@@ -3,7 +3,7 @@ public class tester {
         Candy candy1 = new Candy("vanilla", 2.30, 10, 0.89);
         Cookie chocolatechips = new Cookie("choco", 3, 100, 1.34);
         IceCream vanilla = new IceCream("vanilla", 200, 0.75);
-        Sundae sundae1 = new Sundae("Chocolate", 300, 1.50, "Caramel", 5.5);
+        Sundae sundae1 = new Sundae("Chocolate", 300, 1.50, "Caramel", 5.50);
         IceCream ice2 = new IceCream("strawberry", 150, 6.75);
         Checkout sweetStuff = new Checkout(0.10);
 
@@ -15,11 +15,11 @@ public class tester {
 
         System.out.println("candy calories: " + candy1.getCalories());
 
-        System.out.println("cany1: " + candy1);
+        System.out.println("candy1: " + candy1);
         System.out.println("this is the cost of candy: " + candy1.getCost());
         System.out.println("choco: " + chocolatechips);
-        System.out.println("this is the cost of choco cookiew: " + chocolatechips.getCost());
-        System.out.println("Icecrem: " + vanilla);
+        System.out.println("this is the cost of choco cookie: " + chocolatechips.getCost());
+        System.out.println("Icecream: " + vanilla);
         System.out.println("ice 1 cost: " + vanilla.getCost());
         System.out.println("Ice 2: " + ice2);
         System.out.println("ice 2 cost: " + ice2.getCost());

@@ -41,7 +41,6 @@ public abstract class DessertItem implements Comparable {
 
     @Override
     public int compareTo(Object item){
-        if (item instanceof DessertItem) {
             if (this.getCalories() > ((DessertItem) item).getCalories()) {
                 return 1;
             } else if (this.getCalories() < ((DessertItem) item).getCalories()) {
@@ -49,9 +48,6 @@ public abstract class DessertItem implements Comparable {
             } else {
                 return 0;
             }
-        }
-        else {
-            return 0;
-        }
+
     }
 }

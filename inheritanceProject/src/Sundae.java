@@ -11,7 +11,7 @@ public class Sundae extends IceCream {
     }
 
     public double getCost() {
-        return Math.round(this.cost * 100) / 100.0;
+        return Math.round(super.getCost() * 100) / 100.0;
     }
 
     public String toString() {

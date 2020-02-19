@@ -156,7 +156,8 @@ public class tester {
         }
         else{
             System.out.println(iceCream1 + "with " + iceCream1.getCalories() + " calories is equal to "
-                    + iceCream2 + "with " + iceCream2.getCalories() + " calories.");        }
+                    + iceCream2 + "with " + iceCream2.getCalories() + " calories.");
+        }
 
 
         if (sundae1.compareTo(sundae2) == 1){
@@ -212,7 +213,8 @@ public class tester {
         }
         else{
             System.out.println(candy1 + "with " + candy1.getCalories() + " calories is equal to "
-                    + iceCream1 + "with " + iceCream1.getCalories() + " calories.");        }
+                    + iceCream1 + "with " + iceCream1.getCalories() + " calories.");
+        }
 
 
         if (sundae1.compareTo(cookie1) == 1){

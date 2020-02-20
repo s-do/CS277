@@ -1,4 +1,9 @@
-
+/*Name: Long Nguyen & Selina Do
+ * Date: 02/19/20
+ * Purpose: Test all the classes and their methods
+ * Inputs: None
+ * Output: Strings will be printed to the console for testing
+ */
 
 public class tester {
     public static void main(String[] args) {
@@ -212,6 +217,7 @@ public class tester {
         }
 
         sweetStuff.clear();
+        System.out.println("Amount of items after clearing the list: ");
         System.out.println("number of items:" + sweetStuff.numberOfItems());
     }
 

@@ -1,8 +1,17 @@
+/*Name: Long Nguyen & Selina Do
+ * Date: 02/19/20
+ * Purpose: Cookie class to make cookies object
+ * Inputs: None will be ask in the console but flavor, amount, calories and
+ * priceperDozen will need to be specified when create an object of this class
+ * Output: None
+ */
 public class Cookie extends DessertItem {
     private int amount;
     private double pricePerDozen;
 
-
+    /**
+     * Null constructor for Cookie class
+     */
     public Cookie() {
         super();
         amount = 0;
@@ -11,6 +20,9 @@ public class Cookie extends DessertItem {
 
     //A customize constructor to create a type of cookie of this class
     //Price and calories are hard coded when the object is created
+    /**
+     * Initializes Cookie data
+     */
     public Cookie(String flavor, int user_amount, int Calories, double PricePerDozen) {
         super(flavor);
         amount = user_amount;
@@ -19,10 +31,17 @@ public class Cookie extends DessertItem {
 
     }
 
+    /**
+     * Return the amount of cookies (dozen)
+     * @return amount of cookies*/
     public int getAmount() {
         return amount;
     }
 
+    /**
+     * Return the price per dozen
+     * @return cookie's price per dozen
+     */
     public double getPricePerDozen() {
         return pricePerDozen;
     }
@@ -30,10 +49,14 @@ public class Cookie extends DessertItem {
     //calculate price by amount of cookies
     //return cost in dollars (like $3.54)
     @Override
+    /**
+     * Return the cost of cookies base on the amount
+     * @return cost of cookies*/
     public double getCost() {
         return Math.round(((amount * pricePerDozen) / 12) * 100.0) / 100.0;
     }
 
+    /**Override toString  */
     public String toString() {
         //return getName() + "(Cookie) " + "calories: " + getCalories();
         if (amount == 0.0){

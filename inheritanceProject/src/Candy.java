@@ -34,11 +34,6 @@ public class Candy extends DessertItem{
         return Math.round(weight * pricePerLB * 100.0) / 100.0;
     }
 
-    @Override
-    public int getCalories() {
-        return super.getCalories();
-    }
-
     public String toString() {
         //return getName() + "(Candy) " + "calories: " + getCalories();
         if (weight == 0.0){

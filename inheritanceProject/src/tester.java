@@ -9,9 +9,9 @@ public class tester {
         System.out.println(candy.getWeight() + " lbs. @ " + candy.getPricePerLB() + "/lb.");
         System.out.println(candy + "                              " + candy.getCost() + "0");
 
-        Candy candy1 = new Candy("Corn", 1.5, 500, 7.25);
+        Candy candy1 = new Candy("Gummies", 1.5, 500, 7.25);
         System.out.println(candy1.getWeight() + " lbs. @ " + candy1.getPricePerLB() + "/lb.");
-        System.out.println(candy1 + "                 " + candy1.getCost() + "\n");
+        System.out.println(candy1 + "              " + candy1.getCost() + "\n");
         System.out.println(candy1 + "calories: " + candy1.getCalories() + "\n");
 
         Candy candy2 = new Candy("Lollipop", 2.5, 640, 8.25);
@@ -81,39 +81,7 @@ public class tester {
         sweetStuff.enterItem(iceCream1);
         sweetStuff.enterItem(sundae1);
 
-        System.out.println("Number of items: " + sweetStuff.numberOfItems());
-        double totalCost = sweetStuff.totalCost();
-        System.out.println("Total cost: " + totalCost);
-        double totalTax = sweetStuff.totalTax();
-        System.out.println("Total tax: " + totalTax);
-        double costTax = sweetStuff.totalCost() + sweetStuff.totalTax();
-        System.out.println("Cost + Tax: " + costTax);
-        System.out.println();
-
-        System.out.println("          L&S Dessert Shop");
-        System.out.println("          ----------------");
-
-        // prints out receipt with bad spacing
-        String dessert = "";
-        for (int i = 0; i < sweetStuff.numberOfItems(); i++){
-            DessertItem item = sweetStuff.get(i);
-            if (item instanceof Candy){
-                dessert = ((Candy) item).getWeight() + " @ " + ((Candy) item).getPricePerLB() + "/dz. \n"
-                        + item + "                 " + item.getCost() + "\n";
-            }
-            else if (item instanceof  Cookie){
-                dessert = ((Cookie) item).getAmount() + " lbs. @ " + ((Cookie) item).getPricePerDozen() + "/lb. \n"
-                        + item + "             " + item.getCost();
-            }
-
-            else if (item instanceof IceCream){
-                dessert = item + "           " + item.getCost() + "\n";
-                if (item instanceof Sundae){
-                    dessert = item + "with\n" + ((Sundae) item).getTopping() + "        " + item.getCost() + "0\n";
-                }
-            }
-            System.out.println(dessert);
-        }
+        // prints out the receipt
         System.out.println(sweetStuff);
 
         System.out.println("---------------------------------------------------------------------------------------");
@@ -244,6 +212,10 @@ public class tester {
             DessertItem item = sweetStuff.get(i);
             System.out.println(item + "has " + item.getCalories() + " calories.");
         }
+
+        sweetStuff.clear();
+        System.out.println("number of items:" + sweetStuff.numberOfItems());
+
 
         /*Cookie chocolatechips = new Cookie("choco", 3, 100, 1.34);
         IceCream vanilla = new IceCream("vanilla", 200, 0.75);

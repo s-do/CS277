@@ -72,10 +72,35 @@ public class Checkout {
     }
 
     //return the arraylist for printing, feel free to change it if you want a different output
-    // returns the tax and overall cost of receipt
-    // did the printing in the main
     public String toString() {
-        return "Tax: " + totalTax() + "\nTotal cost:" + (totalCost() + totalTax());
+        double costTax = this.totalCost() + this.totalTax();
+        String dessert = "Number of items: " + this.numberOfItems() + "\n"
+                + "Total cost: " + this.totalCost() + "\n"
+                + "Total tax: " + this.totalTax() + "\n"
+                + "Cost + Tax: " + costTax + "\n"
+                + " \n"
+                + "           L&S Dessert Shop" + "\n"
+                + "           ----------------" + "\n";
+        for (DessertItem item: itemList){
+            if (item instanceof Candy){
+                dessert += ((Candy) item).getWeight() + " @ " + ((Candy) item).getPricePerLB() + "/dz. \n"
+                        + item + "                  " + item.getCost() + "\n";
+            }
+            if (item instanceof  Cookie){
+                dessert += ((Cookie) item).getAmount() + " lbs. @ " + ((Cookie) item).getPricePerDozen() + "/lb. \n"
+                        + item + "                  " + item.getCost() + "\n";
+            }
+            if (item instanceof IceCream){
+                if (item instanceof Sundae){
+                    dessert += item + "with\n" + ((Sundae) item).getTopping() + "            " + item.getCost() + "0\n";
+                }
+                else{
+                    dessert += item + "              " + item.getCost() + "\n";
+                }
+            }
+        }
+        dessert += "\n" + "Tax: " + totalTax() + "\nTotal cost: " + costTax;
+        return dessert;
     }
 
 }

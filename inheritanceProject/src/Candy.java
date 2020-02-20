@@ -32,6 +32,22 @@ public class Candy extends DessertItem{
     }
 
     /**
+     * Change the weight variable of the object
+     * @param weight weight of candy
+     */
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    /**
+     * Change the price per lb value of the object
+     * @param pricePerLB price per pound of candy
+     */
+    public void setPricePerLB(double pricePerLB) {
+        this.pricePerLB = pricePerLB;
+    }
+
+    /**
      * Return the weight of Candy
      * @return weight of candy
      */

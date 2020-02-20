@@ -27,6 +27,14 @@ public class Sundae extends IceCream {
     }
 
     /**
+     * Change the type of topping
+     * @param topping type of topping
+     */
+    public void setTopping(String topping) {
+        this.topping = topping;
+    }
+
+    /**
      * Return type of topping
      * @return type of topping*/
     public String getTopping() {

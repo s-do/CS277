@@ -26,6 +26,14 @@ public class IceCream extends DessertItem {
 	}
 
 	/**
+	 * Change the cost of ice-cream
+	 * @param cost cost of ice-cream
+	 */
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+
+	/**
 	 * Return the cost of Ice-cream
 	 * @return cost of ice-cream*/
 	public double getCost() {

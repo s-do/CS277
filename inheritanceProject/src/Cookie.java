@@ -32,8 +32,25 @@ public class Cookie extends DessertItem {
     }
 
     /**
+     * Change the amount of cookies (dozen)
+     * @param amount amount per dozen of cookies
+     */
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    /**
+     * Change the price of cookies per dozen
+     * @param pricePerDozen price per dozen of cookies
+     */
+    public void setPricePerDozen(double pricePerDozen) {
+        this.pricePerDozen = pricePerDozen;
+    }
+
+    /**
      * Return the amount of cookies (dozen)
-     * @return amount of cookies*/
+     * @return amount of cookies
+     */
     public int getAmount() {
         return amount;
     }

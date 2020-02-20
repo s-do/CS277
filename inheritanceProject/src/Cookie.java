@@ -6,7 +6,9 @@
  * Output: None
  */
 public class Cookie extends DessertItem {
+    /* number of cookies per object*/
     private int amount;
+    /* price per dozen of each Cookie object*/
     private double pricePerDozen;
 
     /**
@@ -20,8 +22,13 @@ public class Cookie extends DessertItem {
 
     //A customize constructor to create a type of cookie of this class
     //Price and calories are hard coded when the object is created
+
     /**
      * Initializes Cookie data
+     * @param flavor cookie flavor
+     * @param user_amount number of cookies
+     * @param Calories calories per cookie
+     * @param PricePerDozen price per dozen of cookies
      */
     public Cookie(String flavor, int user_amount, int Calories, double PricePerDozen) {
         super(flavor);
@@ -75,7 +82,6 @@ public class Cookie extends DessertItem {
 
     /**Override toString  */
     public String toString() {
-        //return getName() + "(Cookie) " + "calories: " + getCalories();
         if (amount == 0.0){
             return getName();
         }

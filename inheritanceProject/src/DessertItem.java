@@ -6,8 +6,9 @@
  * Output: None
  */
 public abstract class DessertItem implements Comparable {
-
+    /*name of DessertItem object */
     protected String name;
+    /*calories of the DessertItem object */
     private int calories;
 
     /**
@@ -16,13 +17,19 @@ public abstract class DessertItem implements Comparable {
     public DessertItem() {
         this("");
     }
+
     /**
      * Initializes DessertItem data
+     * @param name name of DessertItem
      */
     public DessertItem(String name) {
         this.name = name;
     }
 
+    /**
+     * Sets the name of the DessertItem
+     * @param name name that will be set to the DessertItem
+     */
     public void setName(String name) {
         this.name = name;
     }
@@ -34,6 +41,7 @@ public abstract class DessertItem implements Comparable {
     public final String getName() {
         return name;
     }
+
     /**
      * Returns cost of DessertItem
      * @return cost of DessertItem
@@ -41,8 +49,10 @@ public abstract class DessertItem implements Comparable {
     public abstract double getCost();
 
     //added calories methods
+
     /**
      * Change calories of DessertItem
+     * @param calories calorie value that will be set to the DessertItem
      */
     public void setCalories(int calories) {
         this.calories = calories;
@@ -56,7 +66,7 @@ public abstract class DessertItem implements Comparable {
         return calories;
     }
 
-    //override compareto method.
+    //override compareTo method.
     @Override
     /**
      * Compare between different dessert items

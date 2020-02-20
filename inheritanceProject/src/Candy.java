@@ -7,7 +7,9 @@
  */
 
 public class Candy extends DessertItem{
+    /* weight of the Candy object */
     private double weight;
+    /* price per pound of the Candy object */
     private double pricePerLB;
 
     /**
@@ -21,8 +23,13 @@ public class Candy extends DessertItem{
 
     //A customize constructor to create a type of candy of this class
     //Price and calories are hard coded when the object is created
+
     /**
      * Initializes Candy data
+     * @param name name of the object
+     * @param user_weight weight of the object
+     * @param Calories calories of the object
+     * @param PricePerLB price per pound of the object
      */
     public Candy(String name, double user_weight, int Calories, double PricePerLB){
         super(name);
@@ -76,7 +83,6 @@ public class Candy extends DessertItem{
     /**
      * Override toString of Candy class*/
     public String toString() {
-        //return getName() + "(Candy) " + "calories: " + getCalories();
         if (weight == 0.0){
             return getName();
         }

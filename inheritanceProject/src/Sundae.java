@@ -7,6 +7,7 @@
  */
 
 public class Sundae extends IceCream {
+    /* name of the topping for the Sundae object */
     private String topping;
 
     /**
@@ -19,6 +20,11 @@ public class Sundae extends IceCream {
 
     /**
      * Initializes Sundae data
+     * @param flavor ice cream flavor
+     * @param Calories calories of sundae
+     * @param Icecost cost of ice cream
+     * @param Topping name of topping
+     * @param topCost cost of topping
      */
     public Sundae(String flavor, int Calories, double Icecost, String Topping, double topCost) {
         //adding the icecream cost and the topping cost and saved it to the super cost
@@ -55,7 +61,6 @@ public class Sundae extends IceCream {
     /**
      * Override toString */
     public String toString() {
-        //return this.name + "(Sundae ) "+ "calories: " + calories + " cost: " + this.getCost();
         if (getName() == ""){
             return "with";
         }

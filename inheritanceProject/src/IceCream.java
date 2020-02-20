@@ -6,7 +6,8 @@
  * Output: None
  */
 public class IceCream extends DessertItem {
-	 private double cost;
+	/* cost of the IceCream object */
+	private double cost;
 
 	/**
 	 * Null constructor for ice-cream class
@@ -18,6 +19,9 @@ public class IceCream extends DessertItem {
 
 	/**
 	 * Initializes ice-cream data
+	 * @param flavor flavor of ice cream
+	 * @param Calories calories per ice cream
+	 * @param Cost price of ice cream
 	 */
 	public IceCream(String flavor, int Calories, double Cost) {
 		super(flavor);
@@ -51,7 +55,6 @@ public class IceCream extends DessertItem {
 	 * Override toString
 	 */
 	public String toString() {
-		//return this.name + "(IceCream) " + "calories: " + calories + " cost: " + cost;
 		if (cost == 0.0){
 			return getName();
 		}

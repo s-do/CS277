@@ -10,7 +10,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Checkout {
+    /* list of DessertItems */
     private ArrayList<DessertItem> itemList;
+    /* tax rate that will be applied to receipt */
     private double taxRate;
 
     /**
@@ -22,8 +24,10 @@ public class Checkout {
     }
 
     //Constructor with tax rate in the parameter
+
     /**
      * Initializes Sundae data
+     * @param taxRate amount of tax that will be put on the total cost of the DessertItems
      */
     public Checkout(double taxRate) {
         itemList = new ArrayList<DessertItem>();
@@ -41,7 +45,7 @@ public class Checkout {
     //return the tax rate
     /**
      * Return rate of tax
-     * @retur rate of tax*/
+     * @return rate of tax*/
     public double getTaxRate() {
         return taxRate;
     }
@@ -65,6 +69,7 @@ public class Checkout {
 
     /**
      * Return the item in the checkout list
+     * @param i index of ArrayList that will be used to get element
      * @return item in checkout list
      */
     public DessertItem get(int i){

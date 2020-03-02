@@ -27,4 +27,21 @@ public class vendingTester {
         machine.removeMoney(0.10);
         System.out.println(machine.getMoney());
     }
+
+    //this method will obtain the user input as character
+    public static char getInput(){
+        return 'a';
+    }
+
+    //this method will print out the menu on what action the user want to perform
+    public static void printMenu(){};
+
+    //print out 4 types of coins
+    public static void printCoins() {};
+
+    //add coin into the machine base on the user choice.
+    public static void insertCoin(char usrChoice) {};
+    
+
+
 }

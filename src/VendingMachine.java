@@ -36,14 +36,12 @@ public class VendingMachine {
     }
 
     //buying product
-    public int verifyMoney(int usrChoice) {
+    public boolean verifyMoney(int usrChoice) {
         if (money >= itemList.get(usrChoice).getCost()) {
-            removeMoney(itemList.get(usrChoice).getCost());
-            return usrChoice;
+            //removeMoney(itemList.get(usrChoice).getCost());
+            return true;
         }
-        else {
-            return -1;
-        }
+        return false;
     }
 
     public String toString() {

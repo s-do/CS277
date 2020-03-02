@@ -27,4 +27,8 @@ public class Product {
     public void setCost(double cost) {
         this.cost = cost;
     }
+
+    public String toString() {
+        return name + " @" + cost;
+    }
 }

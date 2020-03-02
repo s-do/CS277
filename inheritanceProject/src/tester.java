@@ -12,8 +12,8 @@ public class tester {
         System.out.println(candy.getWeight() + " lbs. @ " + candy.getPricePerLB() + "/lb.");
         System.out.println(candy + "                              " + candy.getCost() + "0");
 
-        Candy candy1 = new Candy("Gummies", 1.5, 500, 7.25);
-        System.out.println(candy1.getWeight() + " lbs. @ " + candy1.getPricePerLB() + "/lb.");
+        DessertItem candy1 = new Candy("Gummies", 1.5, 500, 7.25);
+        //System.out.println(candy1.getWeight() + " lbs. @ " + candy1.getPricePerLB() + "/lb.");
         System.out.println(candy1 + "              " + candy1.getCost() + "\n");
         System.out.println(candy1 + "calories: " + candy1.getCalories() + "\n");
 

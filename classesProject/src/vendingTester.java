@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class vendingTester {
     public static void main(String[] args) {
         VendingMachine machine = new VendingMachine();
-        Product candy1 = new Product("candy", 0.25);
-        Product cookie1 = new Product("cookie", 0.5);
-        Product chip1 = new Product("chip", 0.75);
+        Product candy1 = new Product("candy", 0.25,5);
+        Product cookie1 = new Product("cookie", 0.5,5);
+        Product chip1 = new Product("chip", 0.75,5);
 
         machine.addItem(candy1);
         machine.addItem(cookie1);
@@ -116,7 +116,7 @@ public class vendingTester {
             System.out.println("Insufficient money");
         }
         else{
-            machine.removeItem(product);
+            product.removeQuantity();
             machine.removeMoney(product.getCost());
             System.out.println("Purchased: " + product);
         }
@@ -133,8 +133,12 @@ public class vendingTester {
 
         System.out.print("Enter product price: ");
         double price = in.nextDouble();
+        in.nextLine();
 
-        Product newProduct = new Product(product, price);
+        System.out.print("Enter a quantity: ");
+        int quantity = in.nextInt();
+        in.nextLine();
+        Product newProduct = new Product(product, price, quantity);
 
         machine.addItem(newProduct);
     }

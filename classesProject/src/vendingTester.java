@@ -18,6 +18,7 @@ public class vendingTester {
         int userChoice = -1;
         while (userChoice != 6) {
             printMenu();
+            System.out.print("Enter a vending machine option: ");
             userChoice = getInput();
 
             // Shows products
@@ -27,6 +28,7 @@ public class vendingTester {
             // Inserts coin
             else if (userChoice == 2){
                 printCoins();
+                System.out.print("Choose a coin option: ");
                 char coin = getCoin();
                 Coin insertCoin = new Coin(coin);
                 insertCoin(machine, insertCoin);
@@ -75,7 +77,6 @@ public class vendingTester {
     //separate the method from sout to reuse. 
     public static int getInput() {
         Scanner in = new Scanner(System.in);
-        System.out.print("Enter a vending machine option: ");
         int option = in.nextInt();
         return option;
     }
@@ -98,7 +99,6 @@ public class vendingTester {
      */
     public static char getCoin() {
         Scanner in = new Scanner(System.in);
-        System.out.print("Choose a coin option: ");
         char coinOption = in.next().charAt(0);
         return coinOption;
     }
@@ -151,4 +151,3 @@ public class vendingTester {
         machine.addItem(newProduct);
     }
 
-}

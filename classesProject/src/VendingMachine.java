@@ -16,22 +16,28 @@ public class VendingMachine {
         return itemList.remove(itemIndex);
     }
 
+    public void removeItem(Product product) {
+        itemList.remove(product);
+    }
+
     //adding coin
     public void addMoney(double usrMoney) {
         money += usrMoney;
-    }
-
-    public void removeMoney(double usrMoney) {
-        money -= usrMoney;
     }
 
     public double getMoney(){
         return money;
     }
 
-    public double clearAccount() {
+    public double removeMoney() {
         double returnMoney = money;
         money = 0;
+        return returnMoney;
+    }
+
+    public double removeMoney(double cost) {
+        double returnMoney = money;
+        money -= cost;
         return returnMoney;
     }
 

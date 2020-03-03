@@ -7,6 +7,7 @@ public class Coin {
         value = 0.25;
     }
 
+    //separate constructor from user input.
     public Coin(char usrCoin){
         if (usrCoin == 'a' || usrCoin == 'A'){
             type = "nickel";

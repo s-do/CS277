@@ -13,33 +13,19 @@ public class vendingTester {
 
         System.out.println(machine);
 
-        /*machine.addMoney(0.75);
-        machine.addMoney(0.25);
-        System.out.println("add money into machine: " + machine.getMoney());
-
-        //System.out.println("clear: " + machine.clearAccount());
-        System.out.println("money after: " + machine.getMoney());
-
-        System.out.println("verifying money: " + machine.verifyMoney(0));
-
-        System.out.println("removing: " + machine.removeItem(1));
-        System.out.println("after removing: " + machine);
-
-        System.out.println(machine.getMoney());
-        machine.removeMoney(0.10);
-        System.out.println(machine.getMoney());*/
-
         System.out.println();
 
-        while (true) {
+        int userChoice = -1;
+        while (userChoice != 6) {
             printMenu();
-            int userChoice = getInput();
+            userChoice = getInput();
+
             // Shows products
             if (userChoice == 1){
                 System.out.println(machine);
             }
             // Inserts coin
-            if (userChoice == 2){
+            else if (userChoice == 2){
                 printCoins();
                 char coin = getCoin();
                 Coin insertCoin = new Coin(coin);
@@ -47,26 +33,23 @@ public class vendingTester {
             }
             // STILL NEEDS TO BE ADDED
             // Buy product
-            if (userChoice == 3){
-                System.out.println("empty for now");
+            else if (userChoice == 3){
+
+                //buyProduct(machine,);
             }
 
             // Adds a new product to vending machine
-            if (userChoice == 4){
+            else if (userChoice == 4){
                 addProduct(machine);
             }
 
             // Removes coin
-            if (userChoice == 5){
-                removeCoins(machine);
+            else if (userChoice == 5){
+                //removeCoins(machine);
+                System.out.println("Amount removed: " + machine.removeMoney());
             }
 
-
-            if (userChoice == 6){
-                break;
-            }
-
-            System.out.println("Amount inserted: " + machine.getMoney());
+            System.out.println("Current amount: " + machine.getMoney());
         }
     }
 
@@ -88,6 +71,8 @@ public class vendingTester {
     /**
      * Obtain the user input as an integer
      */
+
+    //separate the method from sout to reuse. 
     public static int getInput() {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter a vending machine option: ");
@@ -128,13 +113,15 @@ public class vendingTester {
     }
 
     // Prints out if user bought product or doesn't have enough money
-    public static void buyProduct(VendingMachine machine, Product prod){
-        /*if (machine.getMoney() < prod.getCost()){
+    public static void buyProduct(VendingMachine machine, Product product){
+        if (machine.getMoney() < product.getCost()){
             System.out.println("Insufficient money");
         }
         else{
-            System.out.println("Purchased: " + prod);
-        }*/
+            machine.removeItem(product);
+            machine.removeMoney(product.getCost());
+            System.out.println("Purchased: " + product);
+        }
     }
 
     /**
@@ -152,16 +139,6 @@ public class vendingTester {
         Product newProduct = new Product(product, price);
 
         machine.addItem(newProduct);
-    }
-
-    /**
-     * Prints out how much money was removed from the machine
-     * @param machine vending machine with products
-     */
-    public static void removeCoins(VendingMachine machine){
-        double money = machine.getMoney();
-        machine.removeMoney(money);
-        System.out.println("Removed: " + money);
     }
 
 }

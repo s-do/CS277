@@ -35,7 +35,8 @@ public class vendingTester {
             // Buy product
             else if (userChoice == 3){
 
-                //buyProduct(machine,);
+                buyProduct(machine, cookie1);
+                System.out.println("machine money: " + machine.getMachineMoney());
             }
 
             // Adds a new product to vending machine
@@ -71,7 +72,6 @@ public class vendingTester {
     /**
      * Obtain the user input as an integer
      */
-
     //separate the method from sout to reuse. 
     public static int getInput() {
         Scanner in = new Scanner(System.in);
@@ -117,9 +117,15 @@ public class vendingTester {
         if (machine.getMoney() < product.getCost()){
             System.out.println("Insufficient money");
         }
+        else if (product.getQuantity() == 0) {
+            System.out.println("Out of stock");
+        }
         else{
             product.removeQuantity();
+            //return change as well.
             machine.removeMoney(product.getCost());
+            machine.addMachineMoney(product.getCost());
+            System.out.println("Change returned: " + machine.removeMoney());
             System.out.println("Purchased: " + product);
         }
     }

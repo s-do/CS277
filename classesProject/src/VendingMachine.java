@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class VendingMachine {
     private ArrayList<Product> itemList;
     private double money;
+    private double machineMoney;
 
     public VendingMachine() {
         itemList = new ArrayList<Product>();
@@ -29,6 +30,18 @@ public class VendingMachine {
         return money;
     }
 
+    public double getMachineMoney() {
+        return machineMoney;
+    }
+
+    public void setMachineMoney(double machineMoney) {
+        this.machineMoney = machineMoney;
+    }
+
+    public void addMachineMoney(double usrMoney){
+        machineMoney += usrMoney;
+    }
+
     public double removeMoney() {
         double returnMoney = money;
         money = 0;
@@ -36,9 +49,9 @@ public class VendingMachine {
     }
 
     public double removeMoney(double cost) {
-        double returnMoney = money;
+        //double returnMoney = money;
         money -= cost;
-        return returnMoney;
+        return money;
     }
 
     //buying product
@@ -53,7 +66,7 @@ public class VendingMachine {
     public String toString() {
         String product = "";
         for (int i = 0; i < itemList.size(); i++){
-            product += itemList.get(i) + "\n";
+            product +=  (i + 1) + ") " + itemList.get(i) + "\n";
         }
         return product;
     }

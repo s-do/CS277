@@ -18,6 +18,7 @@ public class vendingTester {
         int userChoice = -1;
         while (userChoice != 6) {
             printMenu();
+            System.out.print("Enter a vending machine option: ");
             userChoice = getInput();
 
             // Shows products
@@ -27,6 +28,7 @@ public class vendingTester {
             // Inserts coin
             else if (userChoice == 2){
                 printCoins();
+                System.out.print("Choose a coin option: ");
                 char coin = getCoin();
                 Coin insertCoin = new Coin(coin);
                 insertCoin(machine, insertCoin);
@@ -71,11 +73,8 @@ public class vendingTester {
     /**
      * Obtain the user input as an integer
      */
-
-    //separate the method from sout to reuse. 
     public static int getInput() {
         Scanner in = new Scanner(System.in);
-        System.out.print("Enter a vending machine option: ");
         int option = in.nextInt();
         return option;
     }
@@ -98,7 +97,6 @@ public class vendingTester {
      */
     public static char getCoin() {
         Scanner in = new Scanner(System.in);
-        System.out.print("Choose a coin option: ");
         char coinOption = in.next().charAt(0);
         return coinOption;
     }
@@ -114,7 +112,7 @@ public class vendingTester {
 
     // Prints out if user bought product or doesn't have enough money
     public static void buyProduct(VendingMachine machine, Product product){
-        if (machine.getMoney() < product.getCost()){
+        if (machine.getMoney() <= product.getCost()){
             System.out.println("Insufficient money");
         }
         else{

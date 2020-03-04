@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class vendingTester {
     public static void main(String[] args) {
         VendingMachine machine = new VendingMachine();
-        Product candy1 = new Product("candy", 0.25,5);
-        Product cookie1 = new Product("cookie", 0.5,5);
-        Product chip1 = new Product("chip", 0.75,5);
+        Product candy1 = new Product("candy", 0.25, 5);
+        Product cookie1 = new Product("cookie", 0.5, 5);
+        Product chip1 = new Product("chip", 0.75, 5);
 
         machine.addItem(candy1);
         machine.addItem(cookie1);
@@ -22,11 +22,11 @@ public class vendingTester {
             userChoice = getInput();
 
             // Shows products
-            if (userChoice == 1){
+            if (userChoice == 1) {
                 System.out.println(machine);
             }
             // Inserts coin
-            else if (userChoice == 2){
+            else if (userChoice == 2) {
                 printCoins();
                 System.out.print("Choose a coin option: ");
                 char coin = getCoin();
@@ -35,19 +35,19 @@ public class vendingTester {
             }
             // STILL NEEDS TO BE ADDED
             // Buy product
-            else if (userChoice == 3){
+            else if (userChoice == 3) {
 
                 buyProduct(machine, cookie1);
                 System.out.println("machine money: " + machine.getMachineMoney());
             }
 
             // Adds a new product to vending machine
-            else if (userChoice == 4){
+            else if (userChoice == 4) {
                 addProduct(machine);
             }
 
             // Removes coin
-            else if (userChoice == 5){
+            else if (userChoice == 5) {
                 //removeCoins(machine);
                 System.out.println("Amount removed: " + machine.removeMoney());
             }
@@ -59,15 +59,15 @@ public class vendingTester {
     /**
      * Print out the menu on what action the user want to perform
      */
-    public static void printMenu(){
+    public static void printMenu() {
         System.out.println("---------------------------------");
         System.out.println("Vending Machine Options: \n" +
-                           "1. Show products \n" +
-                           "2. Insert Coin \n" +
-                           "3. Buy \n" +
-                           "4. Add product \n" +
-                           "5. Remove coins \n" +
-                           "6. Quit");
+                "1. Show products \n" +
+                "2. Insert Coin \n" +
+                "3. Buy \n" +
+                "4. Add product \n" +
+                "5. Remove coins \n" +
+                "6. Quit");
         System.out.println();
     }
 
@@ -87,10 +87,10 @@ public class vendingTester {
     public static void printCoins() {
         System.out.println("---------------------------------");
         System.out.println("Coin Options: \n" +
-                           "A) nickel @ 0.05 \n" +
-                           "B) dime @ 0.1 \n" +
-                           "C) quarter @ 0.25 \n" +
-                           "D) dollar @ 1.0");
+                "A) nickel @ 0.05 \n" +
+                "B) dime @ 0.1 \n" +
+                "C) quarter @ 0.25 \n" +
+                "D) dollar @ 1.0");
         System.out.println();
     }
 
@@ -105,6 +105,7 @@ public class vendingTester {
 
     /**
      * Adds coin into the machine based on the user coin choice
+     *
      * @param machine vending machine with products
      * @param insCoin coin user chose to insert
      */
@@ -113,14 +114,12 @@ public class vendingTester {
     }
 
     // Prints out if user bought product or doesn't have enough money
-    public static void buyProduct(VendingMachine machine, Product product){
-        if (machine.getMoney() < product.getCost()){
+    public static void buyProduct(VendingMachine machine, Product product) {
+        if (machine.getMoney() < product.getCost()) {
             System.out.println("Insufficient money");
-        }
-        else if (product.getQuantity() == 0) {
+        } else if (product.getQuantity() == 0) {
             System.out.println("Out of stock");
-        }
-        else{
+        } else {
             product.removeQuantity();
             //return change as well.
             machine.removeMoney(product.getCost());
@@ -132,9 +131,10 @@ public class vendingTester {
 
     /**
      * Adds a new product into the vending machine
+     *
      * @param machine vending machine with products
      */
-    public static void addProduct(VendingMachine machine){
+    public static void addProduct(VendingMachine machine) {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter product name: ");
         String product = in.nextLine();
@@ -150,4 +150,5 @@ public class vendingTester {
 
         machine.addItem(newProduct);
     }
+}
 

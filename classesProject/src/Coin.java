@@ -8,20 +8,39 @@ public class Coin {
     }
 
     //separate constructor from user input.
-    public Coin(char usrCoin){
-        if (usrCoin == 'a' || usrCoin == 'A'){
+//    public Coin(char usrCoin){
+//        if (usrCoin == 'a' || usrCoin == 'A'){
+//            type = "nickel";
+//            value = 0.05;
+//        }
+//        else if (usrCoin == 'b' || usrCoin == 'B'){
+//            type = "dime";
+//            value = 0.1;
+//        }
+//        else if (usrCoin == 'c' || usrCoin == 'C'){
+//            type = "quarter";
+//            value = 0.25;
+//        }
+//        else if (usrCoin == 'd' || usrCoin == 'D'){
+//            type = "dollar";
+//            value = 1.0;
+//        }
+//    }
+
+    public Coin(String usrCoin){
+        if (usrCoin == "nickel"){
             type = "nickel";
             value = 0.05;
         }
-        else if (usrCoin == 'b' || usrCoin == 'B'){
+        else if (usrCoin == "dime"){
             type = "dime";
             value = 0.1;
         }
-        else if (usrCoin == 'c' || usrCoin == 'C'){
+        else if (usrCoin == "quarter"){
             type = "quarter";
             value = 0.25;
         }
-        else if (usrCoin == 'd' || usrCoin == 'D'){
+        else if (usrCoin == "dollar"){
             type = "dollar";
             value = 1.0;
         }

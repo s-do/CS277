@@ -21,6 +21,13 @@ public class VendingMachine {
         itemList.remove(product);
     }
 
+    public Product getItem(int itemIndex) {
+        return itemList.get(itemIndex);
+    }
+
+    public int size() {
+       return itemList.size();
+    }
     //adding coin
     public void addMoney(double usrMoney) {
         money += usrMoney;
@@ -30,6 +37,7 @@ public class VendingMachine {
         return money;
     }
 
+    //return the amount of money the machine has
     public double getMachineMoney() {
         return machineMoney;
     }
@@ -42,16 +50,25 @@ public class VendingMachine {
         machineMoney += usrMoney;
     }
 
+    //remove all money the user has in the machine
     public double removeMoney() {
         double returnMoney = money;
         money = 0;
         return returnMoney;
     }
 
+    //remove the amount of money from user when buying a product
     public double removeMoney(double cost) {
         //double returnMoney = money;
         money -= cost;
         return money;
+    }
+
+    //remove the amount of money the machine has and return it
+    public double removeMachineMoney() {
+        double returnMoney = machineMoney;
+        money = 0;
+        return returnMoney;
     }
 
     //buying product
@@ -61,6 +78,12 @@ public class VendingMachine {
             return true;
         }
         return false;
+    }
+
+    public void buyProduct(Product usrProduct){
+        usrProduct.removeQuantity();
+        money -= usrProduct.getCost();
+        machineMoney += usrProduct.getCost();
     }
 
     public String toString() {

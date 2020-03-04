@@ -54,8 +54,6 @@ public class vendingTester {
                 else {
                     System.out.println("Insufficient fund");
                 }
-//                buyProduct(machine, machine.getItem(product - 1));
-//                System.out.println("machine money: " + machine.getMachineMoney());
             }
 
             // Adds a new product to vending machine
@@ -145,22 +143,6 @@ public class vendingTester {
     public static void insertCoin(VendingMachine machine, Coin insCoin) {
         machine.addMoney(insCoin.getValue());
     }
-
-    // Prints out if user bought product or doesn't have enough money
-//    public static void buyProduct(VendingMachine machine, Product product) {
-//        if (machine.getMoney() < product.getCost()) {
-//            System.out.println("Insufficient money");
-//        } else if (product.getQuantity() == 0) {
-//            System.out.println("Out of stock");
-//        } else {
-//            product.removeQuantity();
-//            //return change as well.
-//            machine.removeMoney(product.getCost());
-//            machine.addMachineMoney(product.getCost());
-//            System.out.println("Purchased: " + product);
-//            System.out.println("Change returned: " + machine.removeMoney());
-//        }
-//    }
 
     /**
      * Adds a new product into the vending machine

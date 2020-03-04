@@ -12,6 +12,8 @@ public class vendingTester {
         machine.addItem(chip1);
         System.out.println();
 
+        Scanner scanner = new Scanner(System.in);
+        Card userCard = new Card();
         int userChoice = -1;
         while (userChoice != 6) {
             printMenu();
@@ -22,13 +24,34 @@ public class vendingTester {
             if (userChoice == 1) {
                 System.out.println(machine);
             }
-            // Inserts coin
+            // Choose between card and coins
             else if (userChoice == 2) {
-                printCoins();
-                System.out.print("Choose a coin option: ");
-                char coin = getCoin();
-                Coin insertCoin = new Coin(convertCoin(coin));
-                insertCoin(machine, insertCoin);
+                //printCoins();
+                printPayment();
+                int paymentOption = -1;
+                while (paymentOption < 1 || paymentOption > 2) {
+                    paymentOption = getInput();
+                }
+
+                if(paymentOption == 1) {
+                    System.out.print("Choose a coin option: ");
+                    char coin = getCoin();
+                    Coin insertCoin = new Coin(convertCoin(coin));
+                    insertCoin(machine, insertCoin);
+                }
+                else {
+                    System.out.print("Enter name on card: ");
+                    userCard.setName(scanner.nextLine());
+                    System.out.print("Balance in card: ");
+                    userCard.setBalance(scanner.nextDouble());
+                    scanner.nextLine();
+                    machine.addMoney(userCard.getBalance());
+                    System.out.println(userCard);
+                }
+//                System.out.print("Choose a coin option: ");
+//                char coin = getCoin();
+//                Coin insertCoin = new Coin(convertCoin(coin));
+//                insertCoin(machine, insertCoin);
             }
             // STILL NEEDS TO BE ADDED
             // Buy product
@@ -78,12 +101,18 @@ public class vendingTester {
         System.out.println("---------------------------------");
         System.out.println("Vending Machine Options: \n" +
                 "1. Show products \n" +
-                "2. Insert Coin \n" +
+                "2. Add Money \n" +
                 "3. Buy \n" +
                 "4. Add product \n" +
                 "5. Remove coins \n" +
                 "6. Quit");
         System.out.println();
+    }
+
+    public static void printPayment() {
+        System.out.println("Choose a payment option: \n" +
+                "1. Coins \n" +
+                "2. Card  ");
     }
 
     /**

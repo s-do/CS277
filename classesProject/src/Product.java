@@ -1,10 +1,8 @@
-/** Name: Selina Do and Long Nguyen
- * Date: 03/04/20
- * Purpose: Makes product objects with a cost and quantity
- * Inputs: None but in the tester name, cost, and quantity will be asked
- *          when creating an object of this class
- * Outputs: None
- */
+/* Name: Selina Do and Long Nguyen
+   Date: 03/04/20Purpose: Makes product objects with a cost and quantity
+   Inputs: None but in the tester name, cost, and quantity will be asked
+        when creating an object of this class
+   Outputs: None*/
 public class Product {
     /* name of the product object */
     private String name;

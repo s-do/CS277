@@ -1,11 +1,10 @@
-/** Name: Selina Do and Long Nguyen
- * Date: 03/04/20
- * Purpose: To stimulate a vending machine that allows a user to see the available products, add coins
- *          and buy a product
- * Inputs: Vending Machine, Coin, Card, Product, and menu option
- * Outputs: menu option user chose, product user bought, how much money user put into machine, how much
- *          money removed from the vending machine, and whether or not the user has sufficient funds
- */
+/*Name: Selina Do and Long Nguyen
+ Date: 03/04/20
+ Purpose: To stimulate a vending machine that allows a user to see the available products, add coins
+ and buy a product
+ Inputs: Vending Machine, Coin, Card, Product, and menu option
+ Outputs: menu option user chose, product user bought, how much money user put into machine, how much
+ money removed from the vending machine, and whether or not the user has sufficient funds*/
 import java.util.Scanner;
 
 public class vendingTester {

@@ -84,7 +84,7 @@ public class VendingMachine {
      * @return amount of money in the machine
      */
     public double getMachineMoney() {
-        return machineMoney;
+        return (Math.round(machineMoney) * 100.0) /100.0;
     }
 
     /**
@@ -130,7 +130,7 @@ public class VendingMachine {
     public double removeMachineMoney() {
         double returnMoney = machineMoney;
         machineMoney = 0;
-        return returnMoney;
+        return (Math.round(returnMoney) * 100.0) / 100.0;
     }
 
     /**

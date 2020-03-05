@@ -53,6 +53,6 @@ public class Card {
 
     @Override
     public String toString() {
-        return "Name on Card: " + name + " balance: " + balance;
+        return "Name on Card: " + name + ", balance: " + balance;
     }
 }

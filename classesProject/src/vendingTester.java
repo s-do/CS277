@@ -11,13 +11,6 @@ public class vendingTester {
     public static void main(String[] args) {
         // creates a VendingMachine ArrayList
         VendingMachine machine = new VendingMachine();
-        Product candy1 = new Product("candy", 0.25, 5);
-        Product cookie1 = new Product("cookie", 0.5, 0);
-        Product chip1 = new Product("chip", 0.75, 5);
-
-        machine.addItem(candy1);
-        machine.addItem(cookie1);
-        machine.addItem(chip1);
 
         Scanner scanner = new Scanner(System.in);
         Card userCard = new Card();

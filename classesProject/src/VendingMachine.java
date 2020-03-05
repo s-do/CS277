@@ -1,9 +1,8 @@
-/** Name: Selina Do and Long Nguyen
- * Date: 03/04/20
- * Purpose: Store all product objects in an ArrayList type object
- * Inputs: None
- * Outputs: None
- */
+/*Name: Selina Do and Long Nguyen
+  Date: 03/04/20
+  Purpose: Store all product objects in an ArrayList type object
+  Inputs: None
+  Outputs: None*/
 
 import java.util.ArrayList;
 
@@ -140,6 +139,7 @@ public class VendingMachine {
      * @return true if user has enough money and false if they don't
      */
     public boolean verifyMoney(int usrChoice) {
+//        if (machineMoney >= itemList.get(usrChoice).getCost()) {
         if (money >= itemList.get(usrChoice).getCost()) {
             return true;
         }
@@ -152,8 +152,8 @@ public class VendingMachine {
      */
     public void buyProduct(Product usrProduct){
         usrProduct.removeQuantity();
-        money -= usrProduct.getCost();
-        machineMoney += usrProduct.getCost();
+        machineMoney += money;
+        money = 0;
     }
 
     /**

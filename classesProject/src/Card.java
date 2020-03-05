@@ -4,7 +4,7 @@ public class Card {
 
     public Card() {
         name = "Nova";
-        balance = 500;
+        balance = 0;
     }
 
     public String getName() {
@@ -26,6 +26,10 @@ public class Card {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    public void subtractBalance(double cost) {
+        balance -= cost;
     }
 
     @Override

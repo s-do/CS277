@@ -1,12 +1,23 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 03/04/20
+  Purpose: an object that store the value of the user input
+  Inputs: None
+  Outputs: None*/
+
+
 public class Coin {
     private String type;
     private double value;
 
+    /**Null constructor for the coin class
+     * */
     public Coin(){
         type = "quarter";
         value = 0.25;
     }
 
+    /** Initializes type of coin
+     * @param usrCoin type of coin to be created */
     public Coin(String usrCoin){
         if (usrCoin == "nickel"){
             type = "nickel";
@@ -26,20 +37,14 @@ public class Coin {
         }
     }
 
+    /** Return the type of the coin */
     public String getType() {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
+    /** Return the value of the coin*/
     public double getValue() {
         return value;
-    }
-
-    public void setValue(double value) {
-        this.value = value;
     }
 
     @Override

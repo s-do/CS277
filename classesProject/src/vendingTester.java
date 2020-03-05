@@ -12,11 +12,21 @@ public class vendingTester {
     public static void main(String[] args) {
         // creates a VendingMachine ArrayList
         VendingMachine machine = new VendingMachine();
+        Product candy1 = new Product("candy", 0.25, 5);
+        Product cookie1 = new Product("cookie", 0.5, 0);
+        Product chip1 = new Product("chip", 0.75, 5);
+
+        machine.addItem(candy1);
+        machine.addItem(cookie1);
+        machine.addItem(chip1);
+
         Scanner scanner = new Scanner(System.in);
         Card userCard = new Card();
         int userChoice = -1;
+        int paymentType = -1;
 
         while (userChoice != 6) {
+            //int paymentType = -1;
             // Prints out options user can choose from
             printMenu();
             System.out.print("Enter a vending machine option: ");
@@ -33,6 +43,8 @@ public class vendingTester {
                 while (paymentOption < 1 || paymentOption > 2) {
                     paymentOption = getInput();
                 }
+                //paymentType to keep track of how the user pay.
+                paymentType = paymentOption;
                 // Coin option
                 if(paymentOption == 1) {
                     printCoins();
@@ -48,7 +60,7 @@ public class vendingTester {
                     System.out.print("Balance in card: ");
                     userCard.setBalance(scanner.nextDouble());
                     scanner.nextLine();
-                    machine.addMoney(userCard.getBalance());
+                    //machine.addMoney(userCard.getBalance());
                     System.out.println(userCard);
                 }
             }
@@ -61,19 +73,31 @@ public class vendingTester {
                     System.out.print("Choose a product: ");
                     product = getInput();
                 }
+                //off set by 1 since menu start from 1 and not 0
                 product--;
                 //If the user has enough money, let them buy the item
-                if (machine.verifyMoney(product)) {
-                    machine.buyProduct(machine.getItem(product));
-                    System.out.println("Purchase: " + machine.getItem(product));
-                    System.out.println("Change: " + machine.removeMoney());
-                    //System.out.println("Machine money: " + machine.getMachineMoney());
-                }
-                //otherwise print out of stock or not enough fund if
-                else if (machine.getItem(product).getQuantity() == 0){
+                if (machine.getItem(product).getQuantity() == 0){
+                    machine.removeMachineMoney();
                     System.out.println("Out of stock");
                 }
+                else if (paymentType == 1 && machine.verifyMoney(product)) {
+                        machine.buyProduct(machine.getItem(product));
+                        System.out.println("Purchase: " + machine.getItem(product));
+                        System.out.println("user money: " + machine.getMoney());
+                        System.out.println("Machine money: " + machine.getMachineMoney());
+                }
+
+                else if (paymentType == 2 && userCard.getBalance() >= machine.getItem(product).getCost()) {
+                    Product wantedPro = machine.getItem(product);
+                    wantedPro.removeQuantity();
+                    userCard.subtractBalance(wantedPro.getCost());
+                    System.out.println("Purchases: " + wantedPro);
+                    paymentType = -1;
+                }
+
+                //otherwise print out of stock or not enough fund if
                 else {
+                    machine.removeMoney();
                     System.out.println("Insufficient fund");
                 }
             }
@@ -86,10 +110,8 @@ public class vendingTester {
             // Removes coin
             else if (userChoice == 5) {
                 System.out.println("Amount removed from machine: " + machine.removeMachineMoney());
+                System.out.println("balance in card: " + userCard.getBalance());
             }
-
-            // Prints out amount of money user put into the VendingMachine
-            System.out.println("Current user amount: " + machine.getMoney());
         }
     }
 
@@ -176,6 +198,7 @@ public class vendingTester {
      */
     public static void insertCoin(VendingMachine machine, Coin insCoin) {
         machine.addMoney(insCoin.getValue());
+        //machine.addMachineMoney(insCoin.getValue());
     }
 
     /**

@@ -1,21 +1,23 @@
+/** Name: Selina Do and Long Nguyen
+ * Date: 03/04/20
+ * Purpose: To stimulate a vending machine that allows a user to see the available products, add coins
+ *          and buy a product
+ * Inputs: Vending Machine, Coin, Card, Product, and menu option
+ * Outputs: menu option user chose, product user bought, how much money user put into machine, how much
+ *          money removed from the vending machine, and whether or not the user has sufficient funds
+ */
 import java.util.Scanner;
 
 public class vendingTester {
     public static void main(String[] args) {
+        // creates a VendingMachine ArrayList
         VendingMachine machine = new VendingMachine();
-        Product candy1 = new Product("candy", 0.25, 5);
-        Product cookie1 = new Product("cookie", 0.5, 5);
-        Product chip1 = new Product("chip", 0.75, 5);
-
-        machine.addItem(candy1);
-        machine.addItem(cookie1);
-        machine.addItem(chip1);
-        System.out.println();
-
         Scanner scanner = new Scanner(System.in);
         Card userCard = new Card();
         int userChoice = -1;
+
         while (userChoice != 6) {
+            // Prints out options user can choose from
             printMenu();
             System.out.print("Enter a vending machine option: ");
             userChoice = getInput();
@@ -26,19 +28,20 @@ public class vendingTester {
             }
             // Choose between card and coins
             else if (userChoice == 2) {
-                //printCoins();
                 printPayment();
                 int paymentOption = -1;
                 while (paymentOption < 1 || paymentOption > 2) {
                     paymentOption = getInput();
                 }
-
+                // Coin option
                 if(paymentOption == 1) {
+                    printCoins();
                     System.out.print("Choose a coin option: ");
                     char coin = getCoin();
                     Coin insertCoin = new Coin(convertCoin(coin));
                     insertCoin(machine, insertCoin);
                 }
+                // Card option
                 else {
                     System.out.print("Enter name on card: ");
                     userCard.setName(scanner.nextLine());
@@ -48,12 +51,8 @@ public class vendingTester {
                     machine.addMoney(userCard.getBalance());
                     System.out.println(userCard);
                 }
-//                System.out.print("Choose a coin option: ");
-//                char coin = getCoin();
-//                Coin insertCoin = new Coin(convertCoin(coin));
-//                insertCoin(machine, insertCoin);
             }
-            // STILL NEEDS TO BE ADDED
+
             // Buy product
             else if (userChoice == 3) {
                 System.out.println(machine);
@@ -63,7 +62,7 @@ public class vendingTester {
                     product = getInput();
                 }
                 product--;
-                //If the user have enough money, let them buy the item
+                //If the user has enough money, let them buy the item
                 if (machine.verifyMoney(product)) {
                     machine.buyProduct(machine.getItem(product));
                     System.out.println("Purchase: " + machine.getItem(product));
@@ -86,11 +85,11 @@ public class vendingTester {
 
             // Removes coin
             else if (userChoice == 5) {
-                //removeCoins(machine);
                 System.out.println("Amount removed from machine: " + machine.removeMachineMoney());
             }
 
-            System.out.println("Current amount: " + machine.getMoney());
+            // Prints out amount of money user put into the VendingMachine
+            System.out.println("Current user amount: " + machine.getMoney());
         }
     }
 
@@ -109,16 +108,18 @@ public class vendingTester {
         System.out.println();
     }
 
+    /**
+     * Prints out the different payments the user can choose from
+     */
     public static void printPayment() {
-        System.out.println("Choose a payment option: \n" +
-                "1. Coins \n" +
-                "2. Card  ");
+        System.out.print("1. Coins \n" +
+                "2. Card \n" +
+                "Choose a payment option:  ");
     }
 
     /**
      * Obtain the user input as an integer
      */
-    //separate the method from sout to reuse. 
     public static int getInput() {
         Scanner in = new Scanner(System.in);
         int option = in.nextInt();
@@ -147,7 +148,11 @@ public class vendingTester {
         return coinOption;
     }
 
-    //convert user choice to the name for constructing an object
+    /**
+     * Converts user choice to the name for constructing an object
+     * @param usrCoin coin user chose
+     * @return string of the coin user chose
+     */
     public static String convertCoin(char usrCoin) {
         if (usrCoin == 'a') {
             return "nickel";

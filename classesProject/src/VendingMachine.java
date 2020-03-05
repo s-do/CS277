@@ -139,7 +139,6 @@ public class VendingMachine {
      * @return true if user has enough money and false if they don't
      */
     public boolean verifyMoney(int usrChoice) {
-//        if (machineMoney >= itemList.get(usrChoice).getCost()) {
         if (money >= itemList.get(usrChoice).getCost()) {
             return true;
         }

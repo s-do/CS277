@@ -18,7 +18,6 @@ public class vendingTester {
         int paymentType = -1;
 
         while (userChoice != 6) {
-            //int paymentType = -1;
             // Prints out options user can choose from
             printMenu();
             System.out.print("Enter a vending machine option: ");
@@ -52,7 +51,6 @@ public class vendingTester {
                     System.out.print("Balance in card: ");
                     userCard.setBalance(scanner.nextDouble());
                     scanner.nextLine();
-                    //machine.addMoney(userCard.getBalance());
                     System.out.println(userCard);
                 }
             }
@@ -190,7 +188,6 @@ public class vendingTester {
      */
     public static void insertCoin(VendingMachine machine, Coin insCoin) {
         machine.addMoney(insCoin.getValue());
-        //machine.addMachineMoney(insCoin.getValue());
     }
 
     /**

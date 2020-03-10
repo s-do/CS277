@@ -1,0 +1,122 @@
+	- Pointers as fields
+		○ Recursive types
+			§ C++
+				□ won't work
+				class Node{
+				private:
+					int data;
+					Node next;
+				};
+					® Node n{} won't run b/c it's a reference to a Node
+					® Node next can be an optional value since the last one doesn't have a next Node
+				□ will work
+				class Node{
+				private:
+					int data;
+					Node *next;
+				};
+				
+			§ Java 
+				□ class Node{
+					private int data;
+					private Node next;
+				}
+					® pointer to an object
+			
+		○ Avoiding Duplication
+			§ duplicates
+				□ class Student{
+				private:
+					MajorProgram major;
+				};
+					® every student will have their own object
+					® everyone will have duplicates of the MajorProgram object
+			§ doesn't duplicate
+				□ class Student{
+				private:
+					MajorProgram *major;
+				};
+					® objects will now point to the variable instead of duplicating it
+					® can't change the major's value and deal with null if it was reference
+						◊ class Student{
+						private:
+							MajorProgram &major;
+						};
+	
+		○ Reducing Memory Size
+		○ Optional Values
+			§ field that may not exist
+				□ class Student{
+				private:
+					MajorProgram *major;
+					MajorProgram *minor
+				};
+					® minor is an option variable since not all students don't have minors
+				
+		○ Polymorphism
+			§ can't do it if it's not a Pointer b/c …………
+				□ Student p = … GradStudent();
+				p ->
+					® small in size
+				
+				
+Example
+	- .h
+		○ class Student{
+		private:
+			MajorProgram *major;
+			MajorProgram *minor;
+		public:
+			void SetMinor(MinorProgram *p) {minor = p;}
+		};
+	- .cpp
+		○ function (has errors): automatic storage
+		{
+			Student &s = ……;
+			MinorProgram csMinor = {"……"};
+			s.setMinor(&csMinor);
+		}
+			§ Dangling Pointer: when you have pointer that points to something that no longer exists
+				□ no problems if Student s and csMinor have the same scope but
+					® csMinor is destroyed
+					® Student s is still alive so it's pointing to something that is no longer there
+						◊ impossible to declare something local since its gets destroyed after the block is over 
+						◊ only local variables are not destroyed
+		○ Dynamic Storage (heap)
+			§ choose to create things in there by using the new keyword
+			§ don't know where the thing will end up until the thing runs
+			§ allows you to place things into storage when you don't know where they'll end up
+				□ do this
+					® Student *s = new Student {……};
+				□ don't do this
+					® Student s = new Student {……};
+					
+	- Dynamic Storage (heap)
+		○ not automatically removed from storage after the function is over unlike automatic storage
+			§ local variable s in automatic storage
+				□ s gets destroyed when you leave the function
+			§ object that s puts to is in dynamic storage
+				□ doesn't get destroyed when you leave the function
+			
+			§ problematic
+			{
+				Student *s = new Student = {……};
+				Student s2 = Student{……};
+					® *s, s2, get destroyed
+					® pointer gets destroyed but student is still in dynamic storage
+			}
+		○ Manual Memory Management
+			§ to remove objects from the heap
+			{
+				Student *s = new Student = {……};
+				Student s2 = Student{……};
+				delete s;
+				s-> setMinor();
+					 
+			}
+			§ v
+			{
+				Student *s = new Student = {……};
+				Student s2 = Student{……};
+				delete s; s = nullptr;
+set s to null ptr so you would be able to use it anymore }

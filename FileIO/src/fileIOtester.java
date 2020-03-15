@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class fileIOtester {
     public static void main(String[] args) {
         try {
-            PrintWriter printWriter = new PrintWriter("a.txt");
+            PrintWriter printWriter = new PrintWriter("sales.txt");
 
             //File infoFile = new File("sales.txt");
             //PrintWriter printWriter = new PrintWriter(new FileWriter(infoFile,true));

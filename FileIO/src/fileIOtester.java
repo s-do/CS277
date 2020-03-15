@@ -6,7 +6,7 @@ public class fileIOtester {
     public static void main(String[] args) {
         try {
             File infoFile = new File("sales.txt");
-            PrintWriter printWriter = new PrintWriter(new FileWriter(infoFile,true));
+            PrintWriter printWriter = new PrintWriter(new FileWriter(infoFile, true));
 
             String name = "";
             while (name.length() < 0) {
@@ -34,8 +34,10 @@ public class fileIOtester {
             }
 
             //Add all user info to the file(appending)
-            printWriter.printf(name, ";", service, ";",saleAmount, ";", date);
+            printWriter.printf(name, ";", service, ";", saleAmount, ";", date);
+            printWriter.close();
         }
+
         catch (FileNotFoundException fnf){
             System.out.println("Sales file does not exist");
         }
@@ -43,8 +45,6 @@ public class fileIOtester {
             //e.printStackTrace();
             System.out.println("Could not open file");
         }
-
-
     }
 
     public static String getName() {

@@ -1,19 +1,19 @@
 import java.io.*;
 import java.util.Scanner;
 
-
 public class fileIOtester {
     public static void main(String[] args) {
         try {
             PrintWriter printWriter = new PrintWriter("sales.txt");
+            System.out.println("Input sales information");
 
             boolean contLoop = true;
             while (contLoop) {
                 // Verifies that name of client is not blank
-                System.out.println("Enter your name: ");
+                System.out.println("Enter name: ");
                 String name = getStringInput();
                 while (name.length() <= 0) {
-                    System.out.print("Enter your name: ");
+                    System.out.print("Enter name: ");
                     name = getStringInput();
                 }
 
@@ -87,10 +87,12 @@ public class fileIOtester {
     }
 
     //return true if the user Input is one of the provided service.
-    public static boolean isService(String userInput){
+    public static boolean isService(String userInput) throws UnknownTransactionException{
         if (userInput.equals("Dinner") || userInput.equals("Lodging") || userInput.equals("Conference")) {
             return true;
         }
-        return false;
+        else{
+            throw new UnknownTransactionException("Service does not exist");
+        }
     }
 }

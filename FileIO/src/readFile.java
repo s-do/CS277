@@ -19,7 +19,6 @@ public class readFile {
                 PrintWriter printWriter = new PrintWriter( new FileWriter(sentenceContent[1] + ".txt", true));
                 //Write the sentence to the file.
                 printWriter.println(sentence);
-                System.out.println(sentence);
                 printWriter.close();
             }
             input.close();

@@ -10,7 +10,7 @@ public class readFile {
             Scanner input = new Scanner(inputFile);
 
             while (input.hasNext()){
-                //Read in new line from the text file and save it into a varible
+                //Read in new line from the text file and save it into a variable
                 String sentence = input.nextLine();
                 //Split the line and save it into an array
                 String[] sentenceContent = sentence.split(";");

@@ -6,8 +6,7 @@ public class fileIOtester {
     public static void main(String[] args) {
         try {
             PrintWriter printWriter = new PrintWriter("sales.txt");
-            //File infoFile = new File("sales.txt");
-            //PrintWriter printWriter = new PrintWriter(new FileWriter(infoFile,true));
+
             boolean contLoop = true;
             while (contLoop) {
                 // Verifies that name of client is not blank
@@ -70,10 +69,7 @@ public class fileIOtester {
             printWriter.close();
         } catch (FileNotFoundException fnf){
             System.out.println("Sales file does not exist");
-        } /*catch (IOException exception) {
-        //e.printStackTrace();
-        System.out.println("Could not open file");
-    }*/
+        }
 
     }
 
@@ -84,17 +80,11 @@ public class fileIOtester {
         return userInput;
     }
 
-    // I think we can use 1 method to get the name and service
-        /*public static String getName() { return ""; }
-        public static String getService() { return ""; }*/
-
     public static double getAmount(){
         Scanner in = new Scanner(System.in);
         double amount = in.nextDouble();
         return amount;
     }
-
-    /*public static String getDate() { return ""; }*/
 
     //return true if the user Input is one of the provided service.
     public static boolean isService(String userInput){

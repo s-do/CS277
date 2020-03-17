@@ -33,10 +33,6 @@ public class fileIOtester {
                     existingService = isService(service);
                 }
 
-        /*if (service.equals("Conference")) {
-            throw new UnknownTransactionException("No such service available");
-        }*/
-
                 // Verifies that amount of sale is positive
                 System.out.println("Enter amount of sale: ");
                 double saleAmount = getAmount();
@@ -67,10 +63,13 @@ public class fileIOtester {
                 }
             }
             printWriter.close();
-        } catch (FileNotFoundException fnf){
+        }
+        catch (FileNotFoundException fnf){
             System.out.println("Sales file does not exist");
         }
-
+        catch (UnknownTransactionException exception) {
+            System.out.println("Service does not exist");
+        }
     }
 
 
@@ -88,7 +87,8 @@ public class fileIOtester {
 
     //return true if the user Input is one of the provided service.
     public static boolean isService(String userInput) throws UnknownTransactionException{
-        if (userInput.equals("Dinner") || userInput.equals("Lodging") || userInput.equals("Conference")) {
+        if (userInput.equals("Dinner") || userInput.equals("Lodging") || userInput.equals("Conference")
+        || userInput.equals("Breakfast") || userInput.equals("Lunch")) {
             return true;
         }
         else{

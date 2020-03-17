@@ -1,6 +1,12 @@
 import java.io.*;
 import java.util.Scanner;
-
+/*Name: Selina Do and Long Nguyen
+  Date: 03/16/2020
+  Purpose: Take in a sales file and separate the information in the files into separate files using the type of
+  service provided, sort the users into those files using type of service.
+  Inputs: Sales file
+  Outputs: Multiple files with the services name and contain the users information and their related information
+  */
 public class readFile {
     public static void main(String[] args) {
         if (args.length < 1) {

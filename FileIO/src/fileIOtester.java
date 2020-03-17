@@ -1,6 +1,11 @@
 import java.io.*;
 import java.util.Scanner;
-
+/*Name: Selina Do and Long Nguyen
+  Date: 03/16/2020
+  Purpose: Prompt the user for input information including their names, type of service, the cost of
+  service and the date of service
+  Inputs: Username, type of service, cost of service follows by the date
+  Outputs: information of each users are printed on one line separated by semicolon*/
 public class fileIOtester {
     public static void main(String[] args) {
         File saleFile = new File("sales.txt");

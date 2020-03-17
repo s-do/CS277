@@ -25,13 +25,8 @@ public class fileIOtester {
                     service = getStringInput();
                 }
 
-                // Checks if service was sold
-                boolean existingService = isService(service);
-                while (!existingService) {
-                    System.out.print("Enter an existing service: ");
-                    service = getStringInput();
-                    existingService = isService(service);
-                }
+                // Throws exception UnknownTransaction when user enters a non-existing service
+                isService(service);
 
                 // Verifies that amount of sale is positive
                 System.out.println("Enter amount of sale: ");
@@ -84,6 +79,7 @@ public class fileIOtester {
         double amount = in.nextDouble();
         return amount;
     }
+    
 
     //return true if the user Input is one of the provided service.
     public static boolean isService(String userInput) throws UnknownTransactionException{

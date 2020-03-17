@@ -3,6 +3,10 @@ import java.util.Scanner;
 
 public class readFile {
     public static void main(String[] args) {
+        if (args.length < 1) {
+            System.out.println("Enter a file to read from: ");
+            System.exit(0);
+        }
         String inputFileName = args[0];
         File inputFile = new File(inputFileName);
         System.out.println("input file: " + inputFileName);

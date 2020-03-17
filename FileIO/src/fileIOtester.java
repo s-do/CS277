@@ -3,8 +3,10 @@ import java.util.Scanner;
 
 public class fileIOtester {
     public static void main(String[] args) {
+        File saleFile = new File("sales.txt");
         try {
-            PrintWriter printWriter = new PrintWriter("sales.txt");
+
+            PrintWriter printWriter = new PrintWriter(saleFile);
             System.out.println("Input sales information");
 
             boolean contLoop = true;

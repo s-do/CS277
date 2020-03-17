@@ -10,7 +10,7 @@ public class fileIOtester {
             boolean contLoop = true;
             while (contLoop) {
                 // Verifies that name of client is not blank
-                System.out.println("Enter name: ");
+                System.out.print("Enter name: ");
                 String name = getStringInput();
                 while (name.length() <= 0) {
                     System.out.print("Enter name: ");
@@ -18,7 +18,7 @@ public class fileIOtester {
                 }
 
                 // Verifies that service sold is not blank
-                System.out.println("Enter type of service: ");
+                System.out.print("Enter type of service: ");
                 String service = getStringInput();
                 while (service.length() <= 0) {
                     System.out.print("Enter type of service: ");
@@ -29,7 +29,7 @@ public class fileIOtester {
                 isService(service);
 
                 // Verifies that amount of sale is positive
-                System.out.println("Enter amount of sale: ");
+                System.out.print("Enter amount of sale: ");
                 double saleAmount = getAmount();
                 while (saleAmount < 0) {
                     System.out.print("Enter amount of sale: ");
@@ -37,7 +37,7 @@ public class fileIOtester {
                 }
 
                 // Verifies that date of event is not blank
-                System.out.println("Enter date of service: ");
+                System.out.print("Enter date of service: ");
                 String date = getStringInput();
                 while (date.length() <= 0) {
                     System.out.print("Enter date of service: ");
@@ -47,6 +47,7 @@ public class fileIOtester {
                 //Add all user info to the file(appending)
                 printWriter.println(name + ";" + service + ";" + saleAmount + ";"+ date);
 
+                // Keeps looping until user doesn't want enter anymore sales
                 System.out.println("Do you want to enter more sales? (y/n): ");
                 String enterSales = getStringInput();
                 if (enterSales.equals("n") || enterSales.equals("N")){
@@ -67,21 +68,33 @@ public class fileIOtester {
         }
     }
 
-
+    /**
+     * Gets string input from user
+     * @return user input as a string
+     */
     public static String getStringInput() {
         Scanner in = new Scanner(System.in);
         String userInput = in.nextLine();
         return userInput;
     }
 
+    /**
+     * Gets amount input from user as a double
+     * @return amount as a double
+     */
     public static double getAmount(){
         Scanner in = new Scanner(System.in);
         double amount = in.nextDouble();
         return amount;
     }
-    
 
-    //return true if the user Input is one of the provided service.
+
+    /**
+     * Returns true if the user Input is one of the provided service.
+     * @param userInput service that user inputs
+     * @return true if service exists
+     * @throws UnknownTransactionException exception is thrown if service doesn't exist
+     */
     public static boolean isService(String userInput) throws UnknownTransactionException{
         if (userInput.equals("Dinner") || userInput.equals("Lodging") || userInput.equals("Conference")
         || userInput.equals("Breakfast") || userInput.equals("Lunch")) {

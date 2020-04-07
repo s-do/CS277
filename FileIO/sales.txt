@@ -1,6 +1,3 @@
-John Public;Dinner;29.95;6/7/2014
-Jane Public;Conference;499.00;8/9/2014
-Abby Lawrence;Dinner;23.45;10/10/2014
-Jon Snow;Lodging;14.25;24/1/2014
-Kamado Tanjiro;Lodging;24.52;25/3/2014
-Nezuko;Breakfast;12.23;24/5/2014
+Jon snow;Dinner;2.0;02/12/19
+Tanjiro;Breakfast;3.0;04/02/19
+Tamioka;Conference;5.0;05/05/19

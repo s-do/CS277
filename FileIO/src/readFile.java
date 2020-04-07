@@ -1,8 +1,18 @@
 import java.io.*;
 import java.util.Scanner;
-
+/*Name: Selina Do and Long Nguyen
+  Date: 03/16/2020
+  Purpose: Take in a sales file and separate the information in the files into separate files using the type of
+  service provided, sort the users into those files using type of service.
+  Inputs: Sales file
+  Outputs: Multiple files with the services name and contain the users information and their related information
+  */
 public class readFile {
     public static void main(String[] args) {
+        if (args.length < 1) {
+            System.out.println("Enter a file to read from: ");
+            System.exit(0);
+        }
         String inputFileName = args[0];
         File inputFile = new File(inputFileName);
         System.out.println("input file: " + inputFileName);
@@ -10,7 +20,7 @@ public class readFile {
             Scanner input = new Scanner(inputFile);
 
             while (input.hasNext()){
-                //Read in new line from the text file and save it into a varible
+                //Read in new line from the text file and save it into a variable
                 String sentence = input.nextLine();
                 //Split the line and save it into an array
                 String[] sentenceContent = sentence.split(";");
@@ -19,7 +29,6 @@ public class readFile {
                 PrintWriter printWriter = new PrintWriter( new FileWriter(sentenceContent[1] + ".txt", true));
                 //Write the sentence to the file.
                 printWriter.println(sentence);
-                System.out.println(sentence);
                 printWriter.close();
             }
             input.close();

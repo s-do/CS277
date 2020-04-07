@@ -15,7 +15,7 @@ public class Part1tester {
         File valueList = new File("alphabetPtValue.txt");
 
         // used to time results for loading time of TreeMap?
-        long startLoadTime = System.nanoTime();
+        //long startLoadTime = System.nanoTime();
 
         try{
 
@@ -25,7 +25,8 @@ public class Part1tester {
             Scanner input = new Scanner(inputFile);
             Map<String, Integer> wordMap;
             Map<String, Integer> wordValueMap;
-            if (dataStructure == "Tree") {
+
+            if (dataStructure.equals("Tree")) {
                 wordMap = new TreeMap<>();
                 wordValueMap = new TreeMap<>();
                 System.out.println("Using TreeMap");
@@ -36,33 +37,25 @@ public class Part1tester {
                 System.out.println("Using HashMap");
             }
             while (wordValueList.hasNext()) {
-                //wordValueMap.put(wordValueList.next(), wordValueList.nextInt());
                 String wordLine = wordValueList.nextLine();
-                //System.out.println(wordLine);
                 String[] arrayLine = wordLine.split(", ");
-//                System.out.println(arrayLine[0]);
-//                System.out.println(arrayLine[1]);
                 wordValueMap.put(arrayLine[0], Integer.parseInt(arrayLine[1]));
             }
-            Set<String> valueSet = wordValueMap.keySet();
-            System.out.println("Value set: ");
-            for (String key : valueSet) {
-                Integer value = wordValueMap.get(key);
-                System.out.println(key + "-->" + value);
-            }
+            wordValueList.close();
 
-
-
+            //Adding to Map with total value
+            long startLoadTime = System.nanoTime();
             while (input.hasNext()){
                 String word = input.nextLine();
                 int wordValue = calValue(word,wordValueMap);
                 wordMap.put(word, wordValue);
                 //hash.put(word, 0);
             }
+            long estimatedEndTime = System.nanoTime();
             input.close();
 
             // calculates the loading time of TreeMap
-            long estimatedLoadTime = System.nanoTime() - startLoadTime;
+            long estimatedLoadTime = estimatedEndTime - startLoadTime;
 
             //System.out.println("Using TreeMap:");
             System.out.println("Time for loading into Map " + estimatedLoadTime + " nano-seconds");
@@ -74,6 +67,13 @@ public class Part1tester {
                 System.out.println(key + " --> " + value);
             }
 
+            //Search Time test
+            long startSearch = System.nanoTime();
+            wordMap.get("quats");
+            wordMap.get("quat");
+            wordMap.get("qi");
+            long stopSearch = System.nanoTime();
+            System.out.println("Search time: " + (stopSearch - startSearch));
         }
         catch (FileNotFoundException exception){
             System.out.println("Input file was not found");

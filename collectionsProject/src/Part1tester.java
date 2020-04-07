@@ -2,13 +2,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
+//DONT KNOW HOW TO RUN TREEMAP AND HASHMAP SEPARATELY
+
 public class Part1tester {
     public static void main(String[] args) {
         // command line argument for "q not followed by a u" file
         String inputFileName = args[0];
         File inputFile = new File(inputFileName);
 
-        // used to time results for loading time of TreeMap
+        // used to time results for loading time of TreeMap?
         long startLoadTime = System.nanoTime();
 
         try{

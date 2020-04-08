@@ -21,7 +21,7 @@ public class Part1tester {
             Map<String, Integer> wordMap;
             Map<String, Integer> wordValueMap;
 
-            if (dataStructure.equals("Tree")) {
+            if (dataStructure.equals("Tree") || dataStructure.equals("tree")) {
                 wordMap = new TreeMap<>();
                 wordValueMap = new TreeMap<>();
                 System.out.println("Using TreeMap");

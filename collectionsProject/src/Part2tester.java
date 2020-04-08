@@ -15,7 +15,7 @@ public class Part2tester {
             Scanner input = new Scanner(inputFile);
             Set<String> setType;
 
-            if (dataStructure.equals("Tree")) {
+            if (dataStructure.equals("Tree") || dataStructure.equals("tree")) {
                 setType = new TreeSet<>();
                 System.out.println("Using Tree Set:");
             }

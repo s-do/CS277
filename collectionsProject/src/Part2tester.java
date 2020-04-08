@@ -39,16 +39,24 @@ public class Part2tester {
 
             // NEED TO FIX SEARCH
             long startSearch = System.currentTimeMillis();
+            for (int i = 0; i < 100; i++){
+                for (String word: setType){
+                    if (word.equals("alice")){
+                        continue;
+                    }
+                }
+            }
+            /*
             int count = 0;
             while (count < 1000){
                 for (String word: setType){
                     //System.out.println(word);
-                    /*if (word.equals("Alice")){
+                    *//*if (word.equals("Alice")){
                         System.out.println("Alice");;
-                    }*/
+                    }*//*
                 }
                 count++;
-            }
+            }*/
             long stopSearch = System.currentTimeMillis();
             System.out.println("Search time: " + (stopSearch - startSearch) + " milliseconds");
 

@@ -36,14 +36,18 @@ public class Part1tester {
                 wordValueMap = new HashMap<>();
                 System.out.println("Using HashMap");
             }
+
+            //Load the scrabble word face value into a separate map data structure
             while (wordValueList.hasNext()) {
                 String wordLine = wordValueList.nextLine();
                 String[] arrayLine = wordLine.split(", ");
+                //map the character to the following integer value by spliting and converting to integer
                 wordValueMap.put(arrayLine[0], Integer.parseInt(arrayLine[1]));
             }
             wordValueList.close();
 
             //Adding to Map with total value
+            //Start loading time test:
             long startLoadTime = System.nanoTime();
             while (input.hasNext()){
                 String word = input.nextLine();
@@ -79,8 +83,11 @@ public class Part1tester {
             System.out.println("Input file was not found");
         }
     }
+
+    //Method to caculate the total value of a word
     public static int calValue(String word, Map charValue) {
         int totalValue = 0;
+        //interate throught the word and check with the word face value save in Map
         for (int i = 0; i < word.length(); i++) {
             totalValue = totalValue +(int)charValue.get(word.substring(i,i+1));
         }

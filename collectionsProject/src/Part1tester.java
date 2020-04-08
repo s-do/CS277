@@ -2,8 +2,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-//DONT KNOW HOW TO RUN TREEMAP AND HASHMAP SEPARATELY
-
 public class Part1tester {
     public static void main(String[] args) {
         // command line argument for "q not followed by a u" file
@@ -13,9 +11,6 @@ public class Part1tester {
         String dataStructure = args[1];
 
         File valueList = new File("alphabetPtValue.txt");
-
-        // used to time results for loading time of TreeMap?
-        //long startLoadTime = System.nanoTime();
 
         try{
 
@@ -41,7 +36,7 @@ public class Part1tester {
             while (wordValueList.hasNext()) {
                 String wordLine = wordValueList.nextLine();
                 String[] arrayLine = wordLine.split(", ");
-                //map the character to the following integer value by spliting and converting to integer
+                //map the character to the following integer value by splitting and converting to integer
                 wordValueMap.put(arrayLine[0], Integer.parseInt(arrayLine[1]));
             }
             wordValueList.close();
@@ -53,7 +48,6 @@ public class Part1tester {
                 String word = input.nextLine();
                 int wordValue = calValue(word,wordValueMap);
                 wordMap.put(word, wordValue);
-                //hash.put(word, 0);
             }
             long estimatedEndTime = System.nanoTime();
             input.close();
@@ -61,7 +55,6 @@ public class Part1tester {
             // calculates the loading time of TreeMap
             long estimatedLoadTime = estimatedEndTime - startLoadTime;
 
-            //System.out.println("Using TreeMap:");
             System.out.println("Time for loading into Map " + estimatedLoadTime + " nano-seconds");
 
             // prints out each key/value pairs in TreeMap
@@ -84,10 +77,10 @@ public class Part1tester {
         }
     }
 
-    //Method to caculate the total value of a word
+    //Method to calculate the total value of a word
     public static int calValue(String word, Map charValue) {
         int totalValue = 0;
-        //interate throught the word and check with the word face value save in Map
+        //iterate through the word and check with the word face value save in Map
         for (int i = 0; i < word.length(); i++) {
             totalValue = totalValue +(int)charValue.get(word.substring(i,i+1));
         }

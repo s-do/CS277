@@ -1,3 +1,9 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 04/08/2020
+  Purpose: Test the efficiency of HashMap and TreeMap when adding, loading and searching
+  Inputs: Data Structure type (Hash Map or Tree Map) and an input file that contain words that start with q
+  Outputs: Loading time and searching time as well as where all the items are mapped to*/
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;

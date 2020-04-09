@@ -1,0 +1,16 @@
+Part 2
+Using Tree Set:
+Elapsed time for loading = 119 milliseconds
+Search time: 70 milliseconds
+
+Using Tree Set:
+Elapsed time for loading = 136 milliseconds
+Search time: 76 milliseconds
+
+Using Hash Set:
+Elapsed time for loading = 113 milliseconds
+Search time: 75 milliseconds
+
+Using Hash Set:
+Elapsed time for loading = 130 milliseconds
+Search time: 114 milliseconds

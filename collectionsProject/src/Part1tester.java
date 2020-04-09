@@ -7,6 +7,7 @@ public class Part1tester {
         // command line argument for "q not followed by a u" file
         String inputFileName = args[0];
         File inputFile = new File(inputFileName);
+
         //Second command line argument to choose the data structure
         String dataStructure = args[1];
 
@@ -70,7 +71,7 @@ public class Part1tester {
             wordMap.get("quat");
             wordMap.get("qi");
             long stopSearch = System.nanoTime();
-            System.out.println("Search time: " + (stopSearch - startSearch));
+            System.out.println("Time for searching into Map " + (stopSearch - startSearch) + " nano-seconds");
         }
         catch (FileNotFoundException exception){
             System.out.println("Input file was not found");

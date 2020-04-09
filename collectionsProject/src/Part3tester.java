@@ -1,3 +1,9 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 04/08/2020
+  Purpose: Test the efficiency of ArrayList and LinkList when iterating, loading, accesing a random item, inserting
+  Inputs: Data Structure type (ArrayList or Link List)
+  Outputs: List of items inside the list, which random elements was retrieved, items at an index chosen by the user
+  run time of each operations: iteration, loading, retrieving, inserting, retrieving random item.*/
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -56,7 +62,7 @@ public class Part3tester {
             int amountPlayers = getInt();
 
             //create a number of teams using user input
-            ArrayList<List<String>> outerList = new ArrayList<>();
+            List<List<String>> outerList = new ArrayList<>();
             //Create n number of list for the user to add later
             for (int i = 0; i < amountPlayers; i++){
                 //Create multiple LinkedList if the user arguments is LinkedList

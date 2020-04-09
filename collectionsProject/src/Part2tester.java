@@ -1,3 +1,8 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 04/08/2020
+  Purpose: Test the efficiency of HashSet and TreeSet in loading and searching
+  Inputs: Large text file, Data structure type
+  Outputs: Duration of loading and searching operations*/
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;

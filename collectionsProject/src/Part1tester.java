@@ -85,6 +85,11 @@ public class Part1tester {
     }
 
     //Method to calculate the total value of a word
+    /**
+     * Calculate the value of each word
+     * @param word to be calculated
+     * @param charValue a map of value of all alphabetical characters
+     * @return the total value of the word**/
     public static int calValue(String word, Map charValue) {
         int totalValue = 0;
         //iterate through the word and check with the word face value save in Map

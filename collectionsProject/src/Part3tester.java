@@ -99,8 +99,8 @@ public class Part3tester {
 
             //retrieve an item at the user position from all the list
             long startRetrieveTime = System.nanoTime();
-            for (int i = 0; i < outerList.size(); i++) {
-                System.out.println("Item retrieved: " + outerList.get(i).get(userPosition));
+            for (List<String> strings : outerList) {
+                System.out.println("Item retrieved: " + strings.get(userPosition));
             }
             long endRetrieveTime = System.nanoTime();
 

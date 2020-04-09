@@ -1,0 +1,134 @@
+Part 1:
+Using HashMap
+Time for loading into Map 1071000 nano-seconds
+qintar --> 15
+qwerty --> 21
+qaids --> 15
+qintars --> 16
+qabalas --> 18
+qi --> 11
+qis --> 12
+qadis --> 15
+qabala --> 17
+qabalah --> 21
+qanats --> 15
+qindars --> 17
+qaid --> 14
+qadi --> 14
+qindarka --> 22
+qoph --> 18
+qat --> 12
+qabalahs --> 22
+qwertys --> 22
+qindar --> 16
+qophs --> 19
+qiviuts --> 19
+qanat --> 14
+qiviut --> 18
+qats --> 13
+Time for searching into Map 6000 nano-seconds
+
+Using HashMap
+Time for loading into Map 697700 nano-seconds
+qintar --> 15
+qwerty --> 21
+qaids --> 15
+qintars --> 16
+qabalas --> 18
+qi --> 11
+qis --> 12
+qadis --> 15
+qabala --> 17
+qabalah --> 21
+qanats --> 15
+qindars --> 17
+qaid --> 14
+qadi --> 14
+qindarka --> 22
+qoph --> 18
+qat --> 12
+qabalahs --> 22
+qwertys --> 22
+qindar --> 16
+qophs --> 19
+qiviuts --> 19
+qanat --> 14
+qiviut --> 18
+qats --> 13
+Time for searching into Map 7000 nano-seconds
+
+Using TreeMap
+Time for loading into Map 1222000 nano-seconds
+qabala --> 17
+qabalah --> 21
+qabalahs --> 22
+qabalas --> 18
+qadi --> 14
+qadis --> 15
+qaid --> 14
+qaids --> 15
+qanat --> 14
+qanats --> 15
+qat --> 12
+qats --> 13
+qi --> 11
+qindar --> 16
+qindarka --> 22
+qindars --> 17
+qintar --> 15
+qintars --> 16
+qis --> 12
+qiviut --> 18
+qiviuts --> 19
+qoph --> 18
+qophs --> 19
+qwerty --> 21
+qwertys --> 22
+Time for searching into Map 6000 nano-seconds
+
+Using TreeMap
+Time for loading into Map 2201000 nano-seconds
+qabala --> 17
+qabalah --> 21
+qabalahs --> 22
+qabalas --> 18
+qadi --> 14
+qadis --> 15
+qaid --> 14
+qaids --> 15
+qanat --> 14
+qanats --> 15
+qat --> 12
+qats --> 13
+qi --> 11
+qindar --> 16
+qindarka --> 22
+qindars --> 17
+qintar --> 15
+qintars --> 16
+qis --> 12
+qiviut --> 18
+qiviuts --> 19
+qoph --> 18
+qophs --> 19
+qwerty --> 21
+qwertys --> 22
+Time for searching into Map 19200 nano-seconds
+
+
+Part 2
+Using Tree Set:
+Elapsed time for loading = 119 milliseconds
+Search time: 70 milliseconds
+
+Using Tree Set:
+Elapsed time for loading = 136 milliseconds
+Search time: 76 milliseconds
+
+Using Hash Set:
+Elapsed time for loading = 113 milliseconds
+Search time: 75 milliseconds
+
+Using Hash Set:
+Elapsed time for loading = 130 milliseconds
+Search time: 114 milliseconds

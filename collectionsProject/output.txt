@@ -1,0 +1,187 @@
+Part 1:
+Using HashMap
+Time for loading into Map 1071000 nano-seconds
+qintar --> 15
+qwerty --> 21
+qaids --> 15
+qintars --> 16
+qabalas --> 18
+qi --> 11
+qis --> 12
+qadis --> 15
+qabala --> 17
+qabalah --> 21
+qanats --> 15
+qindars --> 17
+qaid --> 14
+qadi --> 14
+qindarka --> 22
+qoph --> 18
+qat --> 12
+qabalahs --> 22
+qwertys --> 22
+qindar --> 16
+qophs --> 19
+qiviuts --> 19
+qanat --> 14
+qiviut --> 18
+qats --> 13
+Time for searching into Map 6000 nano-seconds
+
+Using HashMap
+Time for loading into Map 697700 nano-seconds
+qintar --> 15
+qwerty --> 21
+qaids --> 15
+qintars --> 16
+qabalas --> 18
+qi --> 11
+qis --> 12
+qadis --> 15
+qabala --> 17
+qabalah --> 21
+qanats --> 15
+qindars --> 17
+qaid --> 14
+qadi --> 14
+qindarka --> 22
+qoph --> 18
+qat --> 12
+qabalahs --> 22
+qwertys --> 22
+qindar --> 16
+qophs --> 19
+qiviuts --> 19
+qanat --> 14
+qiviut --> 18
+qats --> 13
+Time for searching into Map 7000 nano-seconds
+
+Using TreeMap
+Time for loading into Map 1222000 nano-seconds
+qabala --> 17
+qabalah --> 21
+qabalahs --> 22
+qabalas --> 18
+qadi --> 14
+qadis --> 15
+qaid --> 14
+qaids --> 15
+qanat --> 14
+qanats --> 15
+qat --> 12
+qats --> 13
+qi --> 11
+qindar --> 16
+qindarka --> 22
+qindars --> 17
+qintar --> 15
+qintars --> 16
+qis --> 12
+qiviut --> 18
+qiviuts --> 19
+qoph --> 18
+qophs --> 19
+qwerty --> 21
+qwertys --> 22
+Time for searching into Map 6000 nano-seconds
+
+Using TreeMap
+Time for loading into Map 2201000 nano-seconds
+qabala --> 17
+qabalah --> 21
+qabalahs --> 22
+qabalas --> 18
+qadi --> 14
+qadis --> 15
+qaid --> 14
+qaids --> 15
+qanat --> 14
+qanats --> 15
+qat --> 12
+qats --> 13
+qi --> 11
+qindar --> 16
+qindarka --> 22
+qindars --> 17
+qintar --> 15
+qintars --> 16
+qis --> 12
+qiviut --> 18
+qiviuts --> 19
+qoph --> 18
+qophs --> 19
+qwerty --> 21
+qwertys --> 22
+Time for searching into Map 19200 nano-seconds
+
+
+Part 2
+Using Tree Set:
+Elapsed time for loading = 119 milliseconds
+Search time: 70 milliseconds
+
+Using Tree Set:
+Elapsed time for loading = 136 milliseconds
+Search time: 76 milliseconds
+
+Using Hash Set:
+Elapsed time for loading = 113 milliseconds
+Search time: 75 milliseconds
+
+Using Hash Set:
+Elapsed time for loading = 130 milliseconds
+Search time: 114 milliseconds
+
+Part3 Output:
+
+Using ArrayList
+List of items: [Fake flowers, Green blanket, Stuffed animal, Non-stick saucepan, Yellow soap, Retirement greeting card, Towel, Soccer ball, Blue candle, Bottle, Parrot, Photo frame, Napkin, Leopard-print belt, Cartoon character pajamas, Owl, Deck of playing cards, Electric toothbrush, Spiderman, Size 14 adult shoe, Hello Kitty clock radio, Plastic bag, Plate with a flowery design, Balloons that say ‘Happy Birthday’, Purple necktie, Coffee mug, Kite, Book with the White House on the cover, Rainbow socks, Eraser, Packet of crayons, Turtle necklace, Cushion with tassels on the corners, Toaster, Pet food, Pink feather boa, Laptop, Toothpick, Paper clip, Toy car, NY Yankees baseball cap, Marilyn Monroe, Feather earrings, Compass, Baby stroller, Bucket, Vacuum cleaner, Flip-flops, Black gloves, Apron, Bible, Orange T-shirt, Chap stick, Pop star’s perfume brand, Vase, Sequin cami, Camera, Cookie, ATM, Pine cones, Salt & pepper shakers, Hand dryer, Eagle, Swimming goggles, Skeleton, Hairbrush, Drinking straw, Pack of batteries, Snow globe, Harry Potter, Lego, Ice cube tray, Umbrella, Deodorant, Dolphin, Sand, Square mirror, Coloring book, Pink lipstick, Seashell, Flag, Wireless speaker, Clothes hanger, Washcloth, Fridge magnet, Magazine, Cookie cutter, Elephant, Sidewalk chalk, Pool noodle, Scarf, Neon post-it notes, Pirate eye patch, Snickers bar, Angel, Frisbee, Guitar, World map, Receipt, Plant pot, ]
+List of Items backward: [Plant pot, Receipt, World map, Guitar, Frisbee, Angel, Snickers bar, Pirate eye patch, Neon post-it notes, Scarf, Pool noodle, Sidewalk chalk, Elephant, Cookie cutter, Magazine, Fridge magnet, Washcloth, Clothes hanger, Wireless speaker, Flag, Seashell, Pink lipstick, Coloring book, Square mirror, Sand, Dolphin, Deodorant, Umbrella, Ice cube tray, Lego, Harry Potter, Snow globe, Pack of batteries, Drinking straw, Hairbrush, Skeleton, Swimming goggles, Eagle, Hand dryer, Salt & pepper shakers, Pine cones, ATM, Cookie, Camera, Sequin cami, Vase, Pop star’s perfume brand, Chap stick, Orange T-shirt, Bible, Apron, Black gloves, Flip-flops, Vacuum cleaner, Bucket, Baby stroller, Compass, Feather earrings, Marilyn Monroe, NY Yankees baseball cap, Toy car, Paper clip, Toothpick, Laptop, Pink feather boa, Pet food, Toaster, Cushion with tassels on the corners, Turtle necklace, Packet of crayons, Eraser, Rainbow socks, Book with the White House on the cover, Kite, Coffee mug, Purple necktie, Balloons that say ‘Happy Birthday’, Plate with a flowery design, Plastic bag, Hello Kitty clock radio, Size 14 adult shoe, Spiderman, Electric toothbrush, Deck of playing cards, Owl, Cartoon character pajamas, Leopard-print belt, Napkin, Photo frame, Parrot, Bottle, Blue candle, Soccer ball, Towel, Retirement greeting card, Yellow soap, Non-stick saucepan, Stuffed animal, Green blanket, Fake flowers, ]
+Enter the number of players:
+3
+Outer array List: [[], [], []]
+Outer List added: [[Drinking straw, Bottle, Laptop, Plant pot, Harry Potter, Bible, Spiderman, Pack of batteries, Guitar, Plate with a flowery design, Skeleton, Receipt, Hello Kitty clock radio, Deodorant, Snickers bar, Coffee mug, Salt & pepper shakers, Fake flowers, Wireless speaker, Vase, Cushion with tassels on the corners, Ice cube tray, Pine cones, Washcloth, Dolphin, Flag, Orange T-shirt, Swimming goggles, Flip-flops, Balloons that say ‘Happy Birthday’, Plastic bag, Deck of playing cards, Angel, Parrot, Camera, Size 14 adult shoe, Marilyn Monroe, Blue candle, Pet food, Napkin, Umbrella, Square mirror, Apron, Coloring book, Stuffed animal, Snow globe, Cartoon character pajamas, Chap stick, Pink feather boa, Frisbee, Sidewalk chalk, Pirate eye patch, Neon post-it notes, World map, Sand, Turtle necklace, Pink lipstick, NY Yankees baseball cap, Cookie cutter, Pop star’s perfume brand, Fridge magnet, Cookie, Toy car, ATM, Soccer ball, Lego, Retirement greeting card, Photo frame, Bucket, Vacuum cleaner, Purple necktie, Paper clip, Magazine, Leopard-print belt, Book with the White House on the cover, Eagle, Toothpick, Black gloves, Towel, Packet of crayons, Owl, Hand dryer, Baby stroller, Seashell, Yellow soap, Toaster, Kite, Compass, Non-stick saucepan, Electric toothbrush, Hairbrush, Feather earrings, Clothes hanger, Scarf, Green blanket, Sequin cami, Pool noodle, Eraser, Elephant, Rainbow socks], [Size 14 adult shoe, Camera, Eraser, Hello Kitty clock radio, Magazine, Coloring book, Toaster, Scarf, Compass, Deck of playing cards, Pop star’s perfume brand, Rainbow socks, Spiderman, Green blanket, Plant pot, Pet food, Apron, ATM, Snickers bar, Toy car, Receipt, Sand, Drinking straw, World map, Pool noodle, Clothes hanger, Guitar, Orange T-shirt, Harry Potter, Hand dryer, Pirate eye patch, Baby stroller, Vase, Square mirror, Photo frame, Plate with a flowery design, Fridge magnet, Cookie cutter, Flag, Parrot, Bible, Skeleton, Chap stick, Sequin cami, Coffee mug, Feather earrings, Laptop, NY Yankees baseball cap, Lego, Paper clip, Vacuum cleaner, Kite, Deodorant, Cushion with tassels on the corners, Dolphin, Fake flowers, Pine cones, Elephant, Purple necktie, Cartoon character pajamas, Electric toothbrush, Plastic bag, Owl, Hairbrush, Neon post-it notes, Packet of crayons, Swimming goggles, Book with the White House on the cover, Black gloves, Seashell, Retirement greeting card, Angel, Marilyn Monroe, Sidewalk chalk, Pink feather boa, Bucket, Soccer ball, Cookie, Salt & pepper shakers, Eagle, Pack of batteries, Pink lipstick, Turtle necklace, Frisbee, Flip-flops, Towel, Balloons that say ‘Happy Birthday’, Washcloth, Non-stick saucepan, Yellow soap, Leopard-print belt, Stuffed animal, Wireless speaker, Ice cube tray, Umbrella, Bottle, Snow globe, Napkin, Toothpick, Blue candle], [Clothes hanger, Marilyn Monroe, NY Yankees baseball cap, Baby stroller, Size 14 adult shoe, Drinking straw, Guitar, Neon post-it notes, Plant pot, Hairbrush, Angel, Lego, Plastic bag, Vacuum cleaner, Dolphin, ATM, Toy car, Skeleton, Black gloves, Sidewalk chalk, Towel, Parrot, Coloring book, Fridge magnet, Eagle, Washcloth, Hand dryer, Cartoon character pajamas, Eraser, Kite, Bottle, Spiderman, Leopard-print belt, Salt & pepper shakers, Snow globe, Chap stick, Sand, Elephant, Swimming goggles, Laptop, Paper clip, Harry Potter, Pool noodle, Apron, Rainbow socks, Turtle necklace, Deck of playing cards, Non-stick saucepan, Cookie, Pack of batteries, Cushion with tassels on the corners, Ice cube tray, Yellow soap, Camera, Cookie cutter, Purple necktie, Fake flowers, Retirement greeting card, Soccer ball, Feather earrings, Deodorant, Blue candle, Flag, Stuffed animal, Bible, Scarf, Sequin cami, Pirate eye patch, Pop star’s perfume brand, Toothpick, Book with the White House on the cover, Snickers bar, Wireless speaker, Balloons that say ‘Happy Birthday’, Square mirror, Flip-flops, Electric toothbrush, World map, Pink feather boa, Coffee mug, Frisbee, Bucket, Napkin, Orange T-shirt, Pet food, Compass, Pink lipstick, Owl, Plate with a flowery design, Magazine, Green blanket, Seashell, Toaster, Vase, Packet of crayons, Hello Kitty clock radio, Pine cones, Photo frame, Receipt, Umbrella]]
+Enter a position to insert items:
+2
+Item retrieved: Laptop
+Item retrieved: Eraser
+Item retrieved: NY Yankees baseball cap
+After inserting: [[Drinking straw, Bottle, Hello World, Laptop, Plant pot, Harry Potter, Bible, Spiderman, Pack of batteries, Guitar, Plate with a flowery design, Skeleton, Receipt, Hello Kitty clock radio, Deodorant, Snickers bar, Coffee mug, Salt & pepper shakers, Fake flowers, Wireless speaker, Vase, Cushion with tassels on the corners, Ice cube tray, Pine cones, Washcloth, Dolphin, Flag, Orange T-shirt, Swimming goggles, Flip-flops, Balloons that say ‘Happy Birthday’, Plastic bag, Deck of playing cards, Angel, Parrot, Camera, Size 14 adult shoe, Marilyn Monroe, Blue candle, Pet food, Napkin, Umbrella, Square mirror, Apron, Coloring book, Stuffed animal, Snow globe, Cartoon character pajamas, Chap stick, Pink feather boa, Frisbee, Sidewalk chalk, Pirate eye patch, Neon post-it notes, World map, Sand, Turtle necklace, Pink lipstick, NY Yankees baseball cap, Cookie cutter, Pop star’s perfume brand, Fridge magnet, Cookie, Toy car, ATM, Soccer ball, Lego, Retirement greeting card, Photo frame, Bucket, Vacuum cleaner, Purple necktie, Paper clip, Magazine, Leopard-print belt, Book with the White House on the cover, Eagle, Toothpick, Black gloves, Towel, Packet of crayons, Owl, Hand dryer, Baby stroller, Seashell, Yellow soap, Toaster, Kite, Compass, Non-stick saucepan, Electric toothbrush, Hairbrush, Feather earrings, Clothes hanger, Scarf, Green blanket, Sequin cami, Pool noodle, Eraser, Elephant, Rainbow socks], [Size 14 adult shoe, Camera, Hello World, Eraser, Hello Kitty clock radio, Magazine, Coloring book, Toaster, Scarf, Compass, Deck of playing cards, Pop star’s perfume brand, Rainbow socks, Spiderman, Green blanket, Plant pot, Pet food, Apron, ATM, Snickers bar, Toy car, Receipt, Sand, Drinking straw, World map, Pool noodle, Clothes hanger, Guitar, Orange T-shirt, Harry Potter, Hand dryer, Pirate eye patch, Baby stroller, Vase, Square mirror, Photo frame, Plate with a flowery design, Fridge magnet, Cookie cutter, Flag, Parrot, Bible, Skeleton, Chap stick, Sequin cami, Coffee mug, Feather earrings, Laptop, NY Yankees baseball cap, Lego, Paper clip, Vacuum cleaner, Kite, Deodorant, Cushion with tassels on the corners, Dolphin, Fake flowers, Pine cones, Elephant, Purple necktie, Cartoon character pajamas, Electric toothbrush, Plastic bag, Owl, Hairbrush, Neon post-it notes, Packet of crayons, Swimming goggles, Book with the White House on the cover, Black gloves, Seashell, Retirement greeting card, Angel, Marilyn Monroe, Sidewalk chalk, Pink feather boa, Bucket, Soccer ball, Cookie, Salt & pepper shakers, Eagle, Pack of batteries, Pink lipstick, Turtle necklace, Frisbee, Flip-flops, Towel, Balloons that say ‘Happy Birthday’, Washcloth, Non-stick saucepan, Yellow soap, Leopard-print belt, Stuffed animal, Wireless speaker, Ice cube tray, Umbrella, Bottle, Snow globe, Napkin, Toothpick, Blue candle], [Clothes hanger, Marilyn Monroe, Hello World, NY Yankees baseball cap, Baby stroller, Size 14 adult shoe, Drinking straw, Guitar, Neon post-it notes, Plant pot, Hairbrush, Angel, Lego, Plastic bag, Vacuum cleaner, Dolphin, ATM, Toy car, Skeleton, Black gloves, Sidewalk chalk, Towel, Parrot, Coloring book, Fridge magnet, Eagle, Washcloth, Hand dryer, Cartoon character pajamas, Eraser, Kite, Bottle, Spiderman, Leopard-print belt, Salt & pepper shakers, Snow globe, Chap stick, Sand, Elephant, Swimming goggles, Laptop, Paper clip, Harry Potter, Pool noodle, Apron, Rainbow socks, Turtle necklace, Deck of playing cards, Non-stick saucepan, Cookie, Pack of batteries, Cushion with tassels on the corners, Ice cube tray, Yellow soap, Camera, Cookie cutter, Purple necktie, Fake flowers, Retirement greeting card, Soccer ball, Feather earrings, Deodorant, Blue candle, Flag, Stuffed animal, Bible, Scarf, Sequin cami, Pirate eye patch, Pop star’s perfume brand, Toothpick, Book with the White House on the cover, Snickers bar, Wireless speaker, Balloons that say ‘Happy Birthday’, Square mirror, Flip-flops, Electric toothbrush, World map, Pink feather boa, Coffee mug, Frisbee, Bucket, Napkin, Orange T-shirt, Pet food, Compass, Pink lipstick, Owl, Plate with a flowery design, Magazine, Green blanket, Seashell, Toaster, Vase, Packet of crayons, Hello Kitty clock radio, Pine cones, Photo frame, Receipt, Umbrella]]
+Item at 29 is: Flip-flops
+Item at 29 is: Harry Potter
+Item at 29 is: Eraser
+
+Iterate forward and backward time: 4589500 ns
+Time to load to teams: 10431000 ns
+Retrieving time: 419500 ns
+Inserting time: 14300 ns
+Retrieve random item time: 12046600 ns
+
+Process finished with exit code 0
+
+
+Using LinkedList
+List of items: [Fake flowers, Green blanket, Stuffed animal, Non-stick saucepan, Yellow soap, Retirement greeting card, Towel, Soccer ball, Blue candle, Bottle, Parrot, Photo frame, Napkin, Leopard-print belt, Cartoon character pajamas, Owl, Deck of playing cards, Electric toothbrush, Spiderman, Size 14 adult shoe, Hello Kitty clock radio, Plastic bag, Plate with a flowery design, Balloons that say ‘Happy Birthday’, Purple necktie, Coffee mug, Kite, Book with the White House on the cover, Rainbow socks, Eraser, Packet of crayons, Turtle necklace, Cushion with tassels on the corners, Toaster, Pet food, Pink feather boa, Laptop, Toothpick, Paper clip, Toy car, NY Yankees baseball cap, Marilyn Monroe, Feather earrings, Compass, Baby stroller, Bucket, Vacuum cleaner, Flip-flops, Black gloves, Apron, Bible, Orange T-shirt, Chap stick, Pop star’s perfume brand, Vase, Sequin cami, Camera, Cookie, ATM, Pine cones, Salt & pepper shakers, Hand dryer, Eagle, Swimming goggles, Skeleton, Hairbrush, Drinking straw, Pack of batteries, Snow globe, Harry Potter, Lego, Ice cube tray, Umbrella, Deodorant, Dolphin, Sand, Square mirror, Coloring book, Pink lipstick, Seashell, Flag, Wireless speaker, Clothes hanger, Washcloth, Fridge magnet, Magazine, Cookie cutter, Elephant, Sidewalk chalk, Pool noodle, Scarf, Neon post-it notes, Pirate eye patch, Snickers bar, Angel, Frisbee, Guitar, World map, Receipt, Plant pot, ]
+List of Items backward: [Plant pot, Receipt, World map, Guitar, Frisbee, Angel, Snickers bar, Pirate eye patch, Neon post-it notes, Scarf, Pool noodle, Sidewalk chalk, Elephant, Cookie cutter, Magazine, Fridge magnet, Washcloth, Clothes hanger, Wireless speaker, Flag, Seashell, Pink lipstick, Coloring book, Square mirror, Sand, Dolphin, Deodorant, Umbrella, Ice cube tray, Lego, Harry Potter, Snow globe, Pack of batteries, Drinking straw, Hairbrush, Skeleton, Swimming goggles, Eagle, Hand dryer, Salt & pepper shakers, Pine cones, ATM, Cookie, Camera, Sequin cami, Vase, Pop star’s perfume brand, Chap stick, Orange T-shirt, Bible, Apron, Black gloves, Flip-flops, Vacuum cleaner, Bucket, Baby stroller, Compass, Feather earrings, Marilyn Monroe, NY Yankees baseball cap, Toy car, Paper clip, Toothpick, Laptop, Pink feather boa, Pet food, Toaster, Cushion with tassels on the corners, Turtle necklace, Packet of crayons, Eraser, Rainbow socks, Book with the White House on the cover, Kite, Coffee mug, Purple necktie, Balloons that say ‘Happy Birthday’, Plate with a flowery design, Plastic bag, Hello Kitty clock radio, Size 14 adult shoe, Spiderman, Electric toothbrush, Deck of playing cards, Owl, Cartoon character pajamas, Leopard-print belt, Napkin, Photo frame, Parrot, Bottle, Blue candle, Soccer ball, Towel, Retirement greeting card, Yellow soap, Non-stick saucepan, Stuffed animal, Green blanket, Fake flowers, ]
+Enter the number of players:
+3
+Outer array List: [[], [], []]
+Outer List added: [[Dolphin, Bible, Toy car, Turtle necklace, Plate with a flowery design, Toothpick, Plant pot, Feather earrings, Camera, Skeleton, Lego, Pine cones, Cookie, Blue candle, Marilyn Monroe, Angel, NY Yankees baseball cap, Paper clip, ATM, Pool noodle, Baby stroller, Hello Kitty clock radio, Seashell, Ice cube tray, Compass, Photo frame, Scarf, Rainbow socks, Square mirror, Swimming goggles, Cartoon character pajamas, Parrot, Pet food, Sequin cami, Deck of playing cards, Deodorant, Magazine, Laptop, Coffee mug, Snow globe, Hairbrush, Guitar, Green blanket, Pack of batteries, Stuffed animal, Purple necktie, Pop star’s perfume brand, Packet of crayons, Book with the White House on the cover, Washcloth, Pirate eye patch, Pink feather boa, World map, Fake flowers, Soccer ball, Bottle, Fridge magnet, Frisbee, Yellow soap, Drinking straw, Owl, Toaster, Sidewalk chalk, Harry Potter, Vase, Eagle, Balloons that say ‘Happy Birthday’, Chap stick, Towel, Cookie cutter, Hand dryer, Clothes hanger, Eraser, Umbrella, Sand, Vacuum cleaner, Receipt, Wireless speaker, Electric toothbrush, Napkin, Apron, Pink lipstick, Cushion with tassels on the corners, Coloring book, Orange T-shirt, Flag, Spiderman, Flip-flops, Retirement greeting card, Neon post-it notes, Non-stick saucepan, Snickers bar, Elephant, Salt & pepper shakers, Bucket, Leopard-print belt, Plastic bag, Black gloves, Kite, Size 14 adult shoe], [Seashell, Neon post-it notes, Umbrella, Dolphin, Guitar, Black gloves, Napkin, Chap stick, Washcloth, Compass, Scarf, Apron, Snickers bar, Non-stick saucepan, Salt & pepper shakers, Plastic bag, Ice cube tray, Pack of batteries, Rainbow socks, Packet of crayons, Yellow soap, Sidewalk chalk, Cushion with tassels on the corners, Cartoon character pajamas, Coffee mug, Pool noodle, Bucket, Sand, Square mirror, Eraser, Feather earrings, Pink feather boa, Vase, Pine cones, Towel, Clothes hanger, Swimming goggles, Leopard-print belt, Cookie cutter, Pink lipstick, Hand dryer, Elephant, Lego, Toaster, Snow globe, Balloons that say ‘Happy Birthday’, Blue candle, Cookie, Toothpick, Bottle, Fridge magnet, Spiderman, Stuffed animal, Green blanket, Pet food, Coloring book, Size 14 adult shoe, Parrot, Kite, Vacuum cleaner, Plate with a flowery design, Hello Kitty clock radio, Marilyn Monroe, Hairbrush, NY Yankees baseball cap, Eagle, Owl, Angel, Retirement greeting card, Magazine, Electric toothbrush, Bible, Turtle necklace, Purple necktie, Photo frame, Deck of playing cards, Toy car, World map, Camera, Pirate eye patch, Deodorant, Flip-flops, Laptop, Book with the White House on the cover, Paper clip, Harry Potter, Wireless speaker, Fake flowers, ATM, Sequin cami, Baby stroller, Pop star’s perfume brand, Plant pot, Skeleton, Frisbee, Receipt, Drinking straw, Soccer ball, Orange T-shirt, Flag], [Parrot, Paper clip, Cookie cutter, Plate with a flowery design, Pool noodle, Size 14 adult shoe, Elephant, Bottle, Scarf, Baby stroller, Snow globe, Plastic bag, Blue candle, Packet of crayons, Salt & pepper shakers, Pack of batteries, Toothpick, Toaster, Toy car, Purple necktie, Rainbow socks, Vacuum cleaner, Plant pot, Angel, Deck of playing cards, Fake flowers, Feather earrings, Cookie, Magazine, Fridge magnet, NY Yankees baseball cap, Retirement greeting card, Vase, Guitar, World map, Harry Potter, Pine cones, Spiderman, Stuffed animal, Green blanket, Hello Kitty clock radio, Towel, Clothes hanger, Swimming goggles, Sequin cami, Balloons that say ‘Happy Birthday’, Hairbrush, Washcloth, Flip-flops, Deodorant, Non-stick saucepan, Sidewalk chalk, Flag, Ice cube tray, Book with the White House on the cover, Kite, Owl, Pink feather boa, Frisbee, Cartoon character pajamas, Drinking straw, Pirate eye patch, Photo frame, Pink lipstick, Dolphin, Compass, Black gloves, Turtle necklace, Electric toothbrush, Cushion with tassels on the corners, Lego, Napkin, Skeleton, Hand dryer, Eraser, Neon post-it notes, Seashell, Eagle, Chap stick, Soccer ball, Bucket, Marilyn Monroe, Leopard-print belt, Bible, Snickers bar, Coloring book, ATM, Wireless speaker, Sand, Receipt, Yellow soap, Pet food, Orange T-shirt, Pop star’s perfume brand, Camera, Umbrella, Apron, Laptop, Coffee mug, Square mirror]]
+Enter a position to insert items:
+2
+Item retrieved: Toy car
+Item retrieved: Umbrella
+Item retrieved: Cookie cutter
+After inserting: [[Dolphin, Bible, Hello World, Toy car, Turtle necklace, Plate with a flowery design, Toothpick, Plant pot, Feather earrings, Camera, Skeleton, Lego, Pine cones, Cookie, Blue candle, Marilyn Monroe, Angel, NY Yankees baseball cap, Paper clip, ATM, Pool noodle, Baby stroller, Hello Kitty clock radio, Seashell, Ice cube tray, Compass, Photo frame, Scarf, Rainbow socks, Square mirror, Swimming goggles, Cartoon character pajamas, Parrot, Pet food, Sequin cami, Deck of playing cards, Deodorant, Magazine, Laptop, Coffee mug, Snow globe, Hairbrush, Guitar, Green blanket, Pack of batteries, Stuffed animal, Purple necktie, Pop star’s perfume brand, Packet of crayons, Book with the White House on the cover, Washcloth, Pirate eye patch, Pink feather boa, World map, Fake flowers, Soccer ball, Bottle, Fridge magnet, Frisbee, Yellow soap, Drinking straw, Owl, Toaster, Sidewalk chalk, Harry Potter, Vase, Eagle, Balloons that say ‘Happy Birthday’, Chap stick, Towel, Cookie cutter, Hand dryer, Clothes hanger, Eraser, Umbrella, Sand, Vacuum cleaner, Receipt, Wireless speaker, Electric toothbrush, Napkin, Apron, Pink lipstick, Cushion with tassels on the corners, Coloring book, Orange T-shirt, Flag, Spiderman, Flip-flops, Retirement greeting card, Neon post-it notes, Non-stick saucepan, Snickers bar, Elephant, Salt & pepper shakers, Bucket, Leopard-print belt, Plastic bag, Black gloves, Kite, Size 14 adult shoe], [Seashell, Neon post-it notes, Hello World, Umbrella, Dolphin, Guitar, Black gloves, Napkin, Chap stick, Washcloth, Compass, Scarf, Apron, Snickers bar, Non-stick saucepan, Salt & pepper shakers, Plastic bag, Ice cube tray, Pack of batteries, Rainbow socks, Packet of crayons, Yellow soap, Sidewalk chalk, Cushion with tassels on the corners, Cartoon character pajamas, Coffee mug, Pool noodle, Bucket, Sand, Square mirror, Eraser, Feather earrings, Pink feather boa, Vase, Pine cones, Towel, Clothes hanger, Swimming goggles, Leopard-print belt, Cookie cutter, Pink lipstick, Hand dryer, Elephant, Lego, Toaster, Snow globe, Balloons that say ‘Happy Birthday’, Blue candle, Cookie, Toothpick, Bottle, Fridge magnet, Spiderman, Stuffed animal, Green blanket, Pet food, Coloring book, Size 14 adult shoe, Parrot, Kite, Vacuum cleaner, Plate with a flowery design, Hello Kitty clock radio, Marilyn Monroe, Hairbrush, NY Yankees baseball cap, Eagle, Owl, Angel, Retirement greeting card, Magazine, Electric toothbrush, Bible, Turtle necklace, Purple necktie, Photo frame, Deck of playing cards, Toy car, World map, Camera, Pirate eye patch, Deodorant, Flip-flops, Laptop, Book with the White House on the cover, Paper clip, Harry Potter, Wireless speaker, Fake flowers, ATM, Sequin cami, Baby stroller, Pop star’s perfume brand, Plant pot, Skeleton, Frisbee, Receipt, Drinking straw, Soccer ball, Orange T-shirt, Flag], [Parrot, Paper clip, Hello World, Cookie cutter, Plate with a flowery design, Pool noodle, Size 14 adult shoe, Elephant, Bottle, Scarf, Baby stroller, Snow globe, Plastic bag, Blue candle, Packet of crayons, Salt & pepper shakers, Pack of batteries, Toothpick, Toaster, Toy car, Purple necktie, Rainbow socks, Vacuum cleaner, Plant pot, Angel, Deck of playing cards, Fake flowers, Feather earrings, Cookie, Magazine, Fridge magnet, NY Yankees baseball cap, Retirement greeting card, Vase, Guitar, World map, Harry Potter, Pine cones, Spiderman, Stuffed animal, Green blanket, Hello Kitty clock radio, Towel, Clothes hanger, Swimming goggles, Sequin cami, Balloons that say ‘Happy Birthday’, Hairbrush, Washcloth, Flip-flops, Deodorant, Non-stick saucepan, Sidewalk chalk, Flag, Ice cube tray, Book with the White House on the cover, Kite, Owl, Pink feather boa, Frisbee, Cartoon character pajamas, Drinking straw, Pirate eye patch, Photo frame, Pink lipstick, Dolphin, Compass, Black gloves, Turtle necklace, Electric toothbrush, Cushion with tassels on the corners, Lego, Napkin, Skeleton, Hand dryer, Eraser, Neon post-it notes, Seashell, Eagle, Chap stick, Soccer ball, Bucket, Marilyn Monroe, Leopard-print belt, Bible, Snickers bar, Coloring book, ATM, Wireless speaker, Sand, Receipt, Yellow soap, Pet food, Orange T-shirt, Pop star’s perfume brand, Camera, Umbrella, Apron, Laptop, Coffee mug, Square mirror]]
+Item at 83 is: Cushion with tassels on the corners
+Item at 83 is: Laptop
+Item at 83 is: Leopard-print belt
+
+Iterate forward and backward time: 4515400 ns
+Time to load to teams: 10836500 ns
+Retrieving time: 440200 ns
+Inserting time: 16300 ns
+Retrieve random item time: 11960100 ns
+
+Process finished with exit code 0

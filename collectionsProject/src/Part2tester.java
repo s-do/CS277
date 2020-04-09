@@ -1,3 +1,8 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 04/08/2020
+  Purpose: Test the efficiency of HashSet and TreeSet in loading and searching
+  Inputs: Large text file, Data structure type
+  Outputs: Duration of loading and searching operations*/
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -15,7 +20,7 @@ public class Part2tester {
             Scanner input = new Scanner(inputFile);
             Set<String> setType;
 
-            if (dataStructure.equals("Tree")) {
+            if (dataStructure.equals("Tree") || dataStructure.equals("tree")) {
                 setType = new TreeSet<>();
                 System.out.println("Using Tree Set:");
             }
@@ -26,9 +31,9 @@ public class Part2tester {
 
             // Inserts all words from file into set
             long startLoadTime = System.currentTimeMillis();
-            while (input.hasNextLine()){
-                String line = input.nextLine();
-                setType.add(line);
+            while (input.hasNext()){
+                String word = input.next();
+                setType.add(word);
             }
             long estimatedEndTime = System.currentTimeMillis();
             input.close();
@@ -37,26 +42,16 @@ public class Part2tester {
             long estimatedLoadTime = estimatedEndTime - startLoadTime;
             System.out.println("Elapsed time for loading = " + estimatedLoadTime + " milliseconds");
 
-            // NEED TO FIX SEARCH
+            // Searches for a word from the novel file 100 times
             long startSearch = System.currentTimeMillis();
             for (int i = 0; i < 100; i++){
                 for (String word: setType){
-                    if (word.equals("alice")){
+                    if (word.equals("Alice")){
                         continue;
                     }
                 }
             }
-            /*
-            int count = 0;
-            while (count < 1000){
-                for (String word: setType){
-                    //System.out.println(word);
-                    *//*if (word.equals("Alice")){
-                        System.out.println("Alice");;
-                    }*//*
-                }
-                count++;
-            }*/
+
             long stopSearch = System.currentTimeMillis();
             System.out.println("Search time: " + (stopSearch - startSearch) + " milliseconds");
 

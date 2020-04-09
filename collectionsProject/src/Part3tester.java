@@ -30,7 +30,6 @@ public class Part3tester {
             while (itemScanner.hasNext()) {
                 myList.add(itemScanner.nextLine());
             }
-            //itemScanner.close();
 
             //create a forward list iterator and iterate forward
             long startIterateTime = System.nanoTime();
@@ -38,7 +37,6 @@ public class Part3tester {
             System.out.print("List of items: [");
             while (listIterator.hasNext()) {
                 System.out.print(listIterator.next());
-                // FIXME: 4/7/2020 Last Item will have a trailing comma!
                 System.out.print(", ");
             }
             System.out.print("]");
@@ -49,7 +47,6 @@ public class Part3tester {
             System.out.print("List of Items backward: [");
             while (backwardIterator.hasPrevious()) {
                 System.out.print(backwardIterator.previous());
-                // FIXME: 4/7/2020 Last item will have a trailing comma!
                 System.out.print(", ");
             }
             System.out.print("]");
@@ -77,7 +74,6 @@ public class Part3tester {
 
             System.out.println("Outer array List: " + outerList);
 
-            //Scanner testScanner = new Scanner(itemFile);
 
             long startTeamTime = System.nanoTime();
             //Add 100 items to each mini list inside the outer list
@@ -89,7 +85,7 @@ public class Part3tester {
                 while (testScanner.hasNext()){
                     String testvar = testScanner.nextLine();
                     outerList.get(i).add(testvar);
-                    //Shuffle the list everytime an item is added
+                    //Shuffle the list every time an item is added
                     Collections.shuffle(outerList.get(i));
                 }
                 testScanner.close();
@@ -103,8 +99,8 @@ public class Part3tester {
 
             //retrieve an item at the user position from all the list
             long startRetrieveTime = System.nanoTime();
-            for (int i = 0; i < outerList.size(); i++) {
-                System.out.println("Item retrieved: " + outerList.get(i).get(userPosition));
+            for (List<String> strings : outerList) {
+                System.out.println("Item retrieved: " + strings.get(userPosition));
             }
             long endRetrieveTime = System.nanoTime();
 
@@ -139,6 +135,11 @@ public class Part3tester {
             System.out.println("Oops! No File was found.");
         }
     }
+
+    /**
+     * Gets user input
+     * @return integer that user entered
+     */
     public static int getInt(){
         Scanner scanner = new Scanner(System.in);
         int userInput = -1;

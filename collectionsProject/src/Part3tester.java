@@ -37,7 +37,6 @@ public class Part3tester {
             System.out.print("List of items: [");
             while (listIterator.hasNext()) {
                 System.out.print(listIterator.next());
-                // FIXME: 4/7/2020 Last Item will have a trailing comma!
                 System.out.print(", ");
             }
             System.out.print("]");
@@ -48,7 +47,6 @@ public class Part3tester {
             System.out.print("List of Items backward: [");
             while (backwardIterator.hasPrevious()) {
                 System.out.print(backwardIterator.previous());
-                // FIXME: 4/7/2020 Last item will have a trailing comma!
                 System.out.print(", ");
             }
             System.out.print("]");
@@ -87,7 +85,7 @@ public class Part3tester {
                 while (testScanner.hasNext()){
                     String testvar = testScanner.nextLine();
                     outerList.get(i).add(testvar);
-                    //Shuffle the list everytime an item is added
+                    //Shuffle the list every time an item is added
                     Collections.shuffle(outerList.get(i));
                 }
                 testScanner.close();

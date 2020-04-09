@@ -30,7 +30,6 @@ public class Part3tester {
             while (itemScanner.hasNext()) {
                 myList.add(itemScanner.nextLine());
             }
-            //itemScanner.close();
 
             //create a forward list iterator and iterate forward
             long startIterateTime = System.nanoTime();
@@ -77,7 +76,6 @@ public class Part3tester {
 
             System.out.println("Outer array List: " + outerList);
 
-            //Scanner testScanner = new Scanner(itemFile);
 
             long startTeamTime = System.nanoTime();
             //Add 100 items to each mini list inside the outer list
@@ -139,6 +137,11 @@ public class Part3tester {
             System.out.println("Oops! No File was found.");
         }
     }
+
+    /**
+     * Gets user input
+     * @return integer that user entered
+     */
     public static int getInt(){
         Scanner scanner = new Scanner(System.in);
         int userInput = -1;

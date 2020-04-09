@@ -3,7 +3,7 @@
  *
  * Objects implementing this interface allow observers
  * to register with it. When this object changes state,
- * it notifies all registered observers.
+ *  * it notifies all registered observers.
  */
 public interface Subject {
 

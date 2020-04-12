@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 public interface ZooSubject {
     /* allows an observer to register with the subject */
     public void addObserver( AnimalAddedListener o );

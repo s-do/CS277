@@ -23,6 +23,11 @@ public class Trader implements Observer{
 
     @Override
     public void update(Object newState) {
+        Trade newTrade = (Trade) newState;
+        display(newTrade);
+    }
 
+    public void display(Trade latestTrade) {
+        System.out.println(traderName + " was notified that: The latest trade is: " + latestTrade);
     }
 }

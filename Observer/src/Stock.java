@@ -3,35 +3,49 @@
 import java.util.ArrayList;
 
 public class Stock implements Subject{
-    private String stockName;
-    private ArrayList<Trader> traderList;
+    private String mStockName;
+    private ArrayList<Observer> traderList;
     private Trade latestTrade;
 
     public Stock() {
-        stockName = "Gintama";
+        mStockName = "Gintama";
+        traderList = new ArrayList<>();
+    }
+
+    public Stock (String stockName){
+        mStockName = stockName;
         traderList = new ArrayList<>();
     }
 
     public String getStockName() {
-        return stockName;
+        return mStockName;
     }
 
     public void setStockName(String stockName) {
-        this.stockName = stockName;
+        this.mStockName = stockName;
     }
 
     @Override
-    public void addObserver(Observer o) {
-        //traderList.add();
+    public void addObserver(Observer trader) {
+        traderList.add(trader);
     }
 
     @Override
     public void notifyObservers() {
-
+        for (Observer observer : traderList) {
+            observer.update(latestTrade);
+        }
     }
 
     @Override
-    public void removeObserver(Observer o) {
+    public void removeObserver(Observer trader) {
+        traderList.remove(trader);
+    }
 
+    /** Update latestTrade private variables to the latest trade
+     *  then notify all subscriber in the list.*/
+    public void addLatestTrade(Trade trade){
+        latestTrade = trade;
+        notifyObservers();
     }
 }

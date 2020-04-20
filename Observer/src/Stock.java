@@ -22,7 +22,7 @@ public class Stock implements Subject{
 
     @Override
     public void addObserver(Observer o) {
-
+        //traderList.add();
     }
 
     @Override

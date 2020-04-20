@@ -1,8 +1,18 @@
+import java.util.ArrayList;
+
 /** This class represent a trader implement observer interface
  *  @private each trader has a name*/
 public class Trader implements Observer{
     private String traderName;
 
+
+    public Trader() {
+        traderName = "John Doe";
+    }
+
+    public Trader (String name) {
+        traderName = name;
+    }
     public String getTraderName() {
         return traderName;
     }

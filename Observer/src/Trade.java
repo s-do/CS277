@@ -16,6 +16,6 @@ public class Trade {
     //FixMe: Not sure how to display the name of the stock therefore a private instance is used
     @Override
     public String toString() {
-        return "Trader: " + mTrader.getTraderName() + "type: " + mType + " amount: $" + mAmount + "Stock: " + mStock;
+        return mTrader.getTraderName() + " " + mType + " $" + mAmount + " Stock: " + mStock;
     }
 }

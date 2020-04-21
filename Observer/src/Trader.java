@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /** This class represent a trader implement observer interface
  *  @private each trader has a name*/
 public class Trader implements Observer{
@@ -28,6 +26,6 @@ public class Trader implements Observer{
     }
 
     public void display(Trade latestTrade) {
-        System.out.println(traderName + " was notified that: The latest trade is: " + latestTrade);
+        System.out.println(traderName + " was notified that: \nThe latest trade is: " + latestTrade);
     }
 }

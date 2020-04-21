@@ -2,7 +2,7 @@
  * This acts as the product the factory constructs.
  */
 
-public abstract class IceCream {
+public abstract class IceCream extends Dessert {
  protected String description;
 
  // returns the description of the ice cream

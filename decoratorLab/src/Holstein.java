@@ -24,6 +24,8 @@ public class Holstein {
   System.out.println(strawberry.getDescription());
   System.out.println(strawberry.cost());
 
+
+  //Added
   Dessert vanilla = new Vanilla();
   vanilla = new HotFudge(vanilla);
   vanilla = new WhippedCream(vanilla);

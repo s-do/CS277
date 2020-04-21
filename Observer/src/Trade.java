@@ -5,7 +5,6 @@ public class Trade {
     private double mAmount;
     private String mStock;      //get the stock name
 
-    //FixMe: this constructor is a little sketch because it take in object stock but only save the name of the stock
     public Trade( Trader trader, String type, double amount, Stock stock) {
         mTrader = trader;
         mType = type;
@@ -13,7 +12,6 @@ public class Trade {
         mStock = stock.getStockName();
     }
 
-    //FixMe: Not sure how to display the name of the stock therefore a private instance is used
     @Override
     public String toString() {
         return mTrader.getTraderName() + " " + mType + " $" + mAmount + " Stock: " + mStock;

@@ -15,6 +15,6 @@ public interface Subject {
     /* removes an observer */
     public void removeObserver( Observer o);
 
-    /* notifes all registered observers when its state changes */
+    /* notifies all registered observers when its state changes */
     public void notifyObservers();
 }

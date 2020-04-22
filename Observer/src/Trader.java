@@ -5,6 +5,8 @@
   Outputs: None */
 import java.util.ArrayList;
 
+/** This class represent a trader implement observer interface
+ *  @private each trader has a name*/
 public class Trader implements Observer{
     private String traderName;
 
@@ -53,6 +55,6 @@ public class Trader implements Observer{
      * Print the object Trade
      * @param latestTrade the Trade object to be printed*/
     public void display(Trade latestTrade) {
-        System.out.println(traderName + " was notified that: The latest trade is: " + latestTrade);
+        System.out.println(traderName + " was notified that: \nThe latest trade is: " + latestTrade);
     }
 }

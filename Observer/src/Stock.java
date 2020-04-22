@@ -54,4 +54,9 @@ public class Stock implements Subject{
         latestTrade = trade;
         notifyObservers();
     }
+
+    @Override
+    public String toString() {
+        return "Stock Name: " + mStockName;
+    }
 }

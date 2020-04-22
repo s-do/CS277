@@ -11,7 +11,6 @@ public class Trade {
     private String mType;
     private double mAmount;
     private String mStock;      //get the stock name
-    
     public Trade( Trader trader, String type, double amount, Stock stock) {
         mTrader = trader;
         mType = type;
@@ -21,6 +20,6 @@ public class Trade {
 
     @Override
     public String toString() {
-        return "Trader: " + mTrader.getTraderName() + "type: " + mType + " amount: $" + mAmount + "Stock: " + mStock;
+        return mTrader.getTraderName() + " " + mType + " $" + mAmount + " Stock: " + mStock;
     }
 }

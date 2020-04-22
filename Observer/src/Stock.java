@@ -1,3 +1,9 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 04/21/2020
+  Purpose: Represent Implement Subject interface and keep a list of the subscribers
+  in order to notify them about the latest trade
+  Inputs: None (put in stock name when construct the class)
+  Outputs: None */
 /** This class represent a stock implement the subject interface
  *  @private the name of the stock, the Traders that bought the stock, and the latest trade*/
 import java.util.ArrayList;

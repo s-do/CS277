@@ -1,0 +1,74 @@
+Available Stock
+Stock Name: APPL
+Stock Name: GOOG
+Stock Name: MSFT
+
+Jane was notified that: 
+The latest trade is: Jane buy $200.0 Stock: APPL
+
+Jane was notified that: 
+The latest trade is: Mitsuba buy $200.0 Stock: APPL
+Mitsuba was notified that: 
+The latest trade is: Mitsuba buy $200.0 Stock: APPL
+
+Jane was notified that: 
+The latest trade is: Otae buy $200.0 Stock: APPL
+Mitsuba was notified that: 
+The latest trade is: Otae buy $200.0 Stock: APPL
+Otae was notified that: 
+The latest trade is: Otae buy $200.0 Stock: APPL
+
+Jane was notified that: 
+The latest trade is: Amy buy $200.0 Stock: APPL
+Mitsuba was notified that: 
+The latest trade is: Amy buy $200.0 Stock: APPL
+Otae was notified that: 
+The latest trade is: Amy buy $200.0 Stock: APPL
+Amy was notified that: 
+The latest trade is: Amy buy $200.0 Stock: APPL
+
+Jane was notified that: 
+The latest trade is: Otae sell $420.0 Stock: APPL
+Mitsuba was notified that: 
+The latest trade is: Otae sell $420.0 Stock: APPL
+Otae was notified that: 
+The latest trade is: Otae sell $420.0 Stock: APPL
+Amy was notified that: 
+The latest trade is: Otae sell $420.0 Stock: APPL
+
+Otae was notified that: 
+The latest trade is: Otae buy $340.0 Stock: GOOG
+
+Otae was notified that: 
+The latest trade is: Jane buy $340.0 Stock: GOOG
+Jane was notified that: 
+The latest trade is: Jane buy $340.0 Stock: GOOG
+
+Otae was notified that: 
+The latest trade is: Amy buy $340.0 Stock: GOOG
+Jane was notified that: 
+The latest trade is: Amy buy $340.0 Stock: GOOG
+Amy was notified that: 
+The latest trade is: Amy buy $340.0 Stock: GOOG
+
+Jane was notified that: 
+The latest trade is: Jane sell $420.0 Stock: APPL
+Mitsuba was notified that: 
+The latest trade is: Jane sell $420.0 Stock: APPL
+Amy was notified that: 
+The latest trade is: Jane sell $420.0 Stock: APPL
+
+Otae was notified that: 
+The latest trade is: Mitsuba buy $540.0 Stock: GOOG
+Jane was notified that: 
+The latest trade is: Mitsuba buy $540.0 Stock: GOOG
+Amy was notified that: 
+The latest trade is: Mitsuba buy $540.0 Stock: GOOG
+Mitsuba was notified that: 
+The latest trade is: Mitsuba buy $540.0 Stock: GOOG
+
+Mitsuba was notified that: 
+The latest trade is: Mitsuba buy $640.0 Stock: MSFT
+
+Mitsuba was notified that: 
+The latest trade is: Mitsuba sell $420.0 Stock: MSFT

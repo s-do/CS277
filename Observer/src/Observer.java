@@ -1,9 +1,13 @@
 /**
  * Observer.java
  *
- * Observers implement this interface so that
- * their update() method is called by the subject
- * when the state of the subject changes.
+ * Name: Selina Do and Long Nguyen
+ * Date: 04/21/2020
+ * Purpose: Observers implement this interface so that
+ *          their update() method is called by the subject
+ *          when the state of the subject changes.
+ * Input: None
+ * Output: None
  */
 public interface Observer {
     /**

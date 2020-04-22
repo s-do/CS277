@@ -1,3 +1,11 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 04/21/2020
+  Purpose: Represents a stock market that keeps track of the trades of stocks and informs all traders
+            whenever a new trade was made
+  Inputs: None
+  Outputs: Names of available stocks and what transactions occurred in the stock market
+  */
+
 /** This is the main where you trade stocks*/
 public class StockMarketTester {
     public static void main(String[] args) {
@@ -35,9 +43,9 @@ public class StockMarketTester {
         apple.addLatestTrade(buy4);
         System.out.println();
 
-        apple.removeObserver(otae);
         Trade sell = new Trade(otae, "sell", 420, apple);
         apple.addLatestTrade(sell);
+        apple.removeObserver(otae);
         System.out.println();
 
         google.addObserver(otae);
@@ -55,9 +63,9 @@ public class StockMarketTester {
         google.addLatestTrade(buy7);
         System.out.println();
 
-        apple.removeObserver(jane);
         Trade sell2 = new Trade(jane, "sell", 420, apple);
         apple.addLatestTrade(sell2);
+        apple.removeObserver(jane);
         System.out.println();
 
         google.addObserver(mitsuba);
@@ -70,9 +78,9 @@ public class StockMarketTester {
         microsoft.addLatestTrade(buy9);
         System.out.println();
 
-        microsoft.removeObserver(mitsuba);
         Trade sell3 = new Trade(mitsuba, "sell", 420, microsoft);
         microsoft.addLatestTrade(sell3);
+        microsoft.removeObserver(mitsuba);
         System.out.println();
     }
 }

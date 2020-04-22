@@ -3,13 +3,12 @@
   Purpose: Represent a traders who owns stocks
   Inputs: None
   Outputs: None */
-import java.util.ArrayList;
 
 /** This class represent a trader implement observer interface
- *  @private each trader has a name*/
+ *  @private each trader has a name
+ */
 public class Trader implements Observer{
     private String traderName;
-
 
     /**
      * Default constructor for Trader class

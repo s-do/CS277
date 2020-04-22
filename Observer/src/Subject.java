@@ -1,9 +1,13 @@
 /**
  * Subject.java
  *
- * Objects implementing this interface allow observers
- * to register with it. When this object changes state,
- *  * it notifies all registered observers.
+ * Name: Selina Do and Long Nguyen
+ * Date: 04/21/2020
+ * Purpose: Objects implementing this interface allow observers
+ *          to register with it. When this object changes state,
+ *          it notifies all registered observers.
+ * Input: None
+ * Output: None
  */
 
 /** Parameter for methods are change to type trader instead of Observer */

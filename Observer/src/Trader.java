@@ -4,9 +4,6 @@
   Inputs: None
   Outputs: None */
 
-/** This class represent a trader implement observer interface
- *  @private each trader has a name
- */
 public class Trader implements Observer{
     private String traderName;
 
@@ -55,5 +52,10 @@ public class Trader implements Observer{
      * @param latestTrade the Trade object to be printed*/
     public void display(Trade latestTrade) {
         System.out.println(traderName + " was notified that: \nThe latest trade is: " + latestTrade);
+    }
+
+    @Override
+    public String toString() {
+        return "Trader name: " + traderName;
     }
 }

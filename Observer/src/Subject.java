@@ -1,4 +1,4 @@
-/**
+/*
  * Subject.java
  *
  * Name: Selina Do and Long Nguyen
@@ -13,12 +13,16 @@
 /** Parameter for methods are change to type trader instead of Observer */
 public interface Subject {
 
-    /* allows an observer to register with the subject */
+    /** allows an observer to register with the subject
+     * @param o the observer object to be added
+     */
     public void addObserver( Observer o );
 
-    /* removes an observer */
+    /** removes an observer
+     * @param o the observer to be removed
+     */
     public void removeObserver( Observer o);
 
-    /* notifies all registered observers when its state changes */
+    /** notifies all registered observers when its state change */
     public void notifyObservers();
 }

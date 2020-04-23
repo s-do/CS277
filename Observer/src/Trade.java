@@ -18,6 +18,16 @@ public class Trade {
     private String mStock;
 
     /**
+     * Default constructor for Trade class
+     */
+    public Trade() {
+        mTrader = new Trader("Jane Doe");
+        mType = "buy";
+        mAmount = 100.0;
+        mStock = "TSLA";
+    }
+
+    /**
      * Custom constructor for Trade class
      * @param trader trader who owns a stock
      * @param type transaction of buying or selling a stock

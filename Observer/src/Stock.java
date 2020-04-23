@@ -6,9 +6,6 @@
   Outputs: None */
 
 import java.util.ArrayList;
-/** This class represent a stock implement the subject interface
- *  @private the name of the stock, the Traders that bought the stock, and the latest trade
- */
 public class Stock implements Subject{
     private String mStockName;
     private ArrayList<Observer> traderList;
@@ -76,7 +73,8 @@ public class Stock implements Subject{
     }
 
     /** Update latestTrade private variables to the latest trade
-     *  then notify all subscriber in the list.*/
+     *  then notify all subscriber in the list.
+     *  @param trade the latest trade*/
     public void addLatestTrade(Trade trade){
         latestTrade = trade;
         notifyObservers();

@@ -7,7 +7,7 @@
 					int data;
 					Node next;
 				};
-					® Node n{} won't run b/c it's a reference to a Node
+					® Node n(&next) won't run b/c it's a reference to a Node
 					® Node next can be an optional value since the last one doesn't have a next Node
 				□ will work
 				class Node{

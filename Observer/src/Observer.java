@@ -1,4 +1,4 @@
-/**
+/*
  * Observer.java
  *
  * Name: Selina Do and Long Nguyen

@@ -1,0 +1,56 @@
+@startuml
+
+interface Observer {
+    {abstract} + update()
+}
+
+class Stock {
+    - mStockName : String
+    - traderList : ArrayList<Observer>
+    + Stock()
+    + Stock()
+    + addLatestTrade()
+    + addObserver()
+    + getStockName()
+    + notifyObservers()
+    + removeObserver()
+    + setStockName()
+    + toString()
+}
+
+class StockMarketTester {
+    {static} + main()
+}
+
+interface Subject {
+    {abstract} + addObserver()
+    {abstract} + notifyObservers()
+    {abstract} + removeObserver()
+}
+
+class Trade {
+    - mAmount : double
+    - mStock : String
+    - mType : String
+    + Trade()
+    + toString()
+}
+
+class Trader {
+    - traderName : String
+    + Trader()
+    + Trader()
+    + display()
+    + getTraderName()
+    + setTraderName()
+    + update()
+}
+
+Stock --|> Subject
+Stock o-- Trade : latestTrade
+Trade o-- Trader : mTrader
+Trader .up.|> Observer
+
+
+
+@enduml

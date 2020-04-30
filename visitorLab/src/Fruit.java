@@ -27,4 +27,8 @@ public class Fruit implements ItemElement
 	}
 
 
+	@Override
+	public double accept(ShoppingCartVisitor visitor) {
+		return 0;
+	}
 }

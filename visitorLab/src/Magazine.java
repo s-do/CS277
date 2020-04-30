@@ -26,4 +26,8 @@ public class Magazine implements ItemElement
 	}
 
 
+	@Override
+	public double accept(ShoppingCartVisitor visitor) {
+		return 0;
+	}
 }

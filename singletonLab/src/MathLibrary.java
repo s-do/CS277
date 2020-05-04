@@ -23,6 +23,6 @@ public class MathLibrary {
     }
 
     public String toString() {
-        return "this is the instance: " + instance;
+        return "this is the instance of math ";
     }
 }

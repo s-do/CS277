@@ -14,4 +14,9 @@ public class FoodBar extends Amenities{
     public double cost() {
         return RoomType.cost() + COST;
     }
+
+    @Override
+    public String toString() {
+        return this.getDescription() + " Cost: $" + this.cost();
+    }
 }

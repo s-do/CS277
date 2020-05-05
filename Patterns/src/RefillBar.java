@@ -18,6 +18,6 @@ public class RefillBar extends Amenities{
 
     @Override
     public String toString() {
-        return RoomType + " with Refill";
+        return this.getDescription() + " Cost: $" + this.cost();
     }
 }

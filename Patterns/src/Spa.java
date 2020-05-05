@@ -15,4 +15,9 @@ public class Spa extends Amenities{
     public double cost() {
         return RoomType.cost() + COST;
     }
+
+    @Override
+    public String toString() {
+        return this.getDescription() + " cost: $" + cost();
+    }
 }

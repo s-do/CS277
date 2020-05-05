@@ -14,6 +14,6 @@ public class RoachPal implements Payment{
 
     @Override
     public void pay(double amount) {
-        System.out.println("Payment from RoachPal" + amount);
+        System.out.println("Payment from RoachPal: " + amount + "\n" + "email: " + this.email);
     }
 }

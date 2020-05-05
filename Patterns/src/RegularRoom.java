@@ -2,7 +2,7 @@ public class RegularRoom extends Room {
     private static final double BASERATE = 50;
 
     public RegularRoom() {
-        description = "Regular room with ok price";
+        description = "Regular room";
     }
 /*    public RegularRoom(int number) {
         roomNumber = number;
@@ -16,6 +16,6 @@ public class RegularRoom extends Room {
 
     @Override
     public String toString() {
-        return "Regular room is bank for your buck";
+        return "Regular room";
     }
 }

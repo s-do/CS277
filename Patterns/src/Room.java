@@ -28,10 +28,7 @@ public abstract class Room {
     }
 
     public String getDescription() {
-        if (this != null) {
             return description;
-        }
-        return "";
     }
 
     public abstract double cost();

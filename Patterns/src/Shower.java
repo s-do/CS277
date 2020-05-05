@@ -18,6 +18,6 @@ public class Shower extends Amenities {
 
     @Override
     public String toString() {
-        return RoomType + " with Shower";
+        return this.getDescription() + " Cost: $" + this.cost();
     }
 }

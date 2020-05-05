@@ -2,7 +2,7 @@ public class Suite extends Room {
     private static final double BASERATE = 100;
 
     public Suite() {
-        description = "Suite, drain your money type of room";
+        description = "Suite";
     }
     @Override
     public double cost() {
@@ -11,6 +11,6 @@ public class Suite extends Room {
 
     @Override
     public String toString() {
-        return "Suite, give me all your money";
+        return "Suite";
     }
 }

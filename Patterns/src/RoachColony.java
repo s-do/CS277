@@ -11,7 +11,7 @@ public class RoachColony {
         growthRate = 0.5;
     }
 
-    public RoachColony(String roachName, double population, double rate){
+    public RoachColony(String roachName, int population, double rate){
         name = roachName;
         initPopulation = population;
         growthRate = rate;
@@ -39,5 +39,10 @@ public class RoachColony {
 
     public void setRoom(Room room) {
         Room = room;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + " Population: " + initPopulation + " Growth rate: " + growthRate;
     }
 }

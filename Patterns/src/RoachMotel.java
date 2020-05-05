@@ -40,12 +40,12 @@ public class RoachMotel {
         else {
             System.out.println("The motel is full!!!");
         }
-        System.out.println("Available after: " + availableRoom);
+        //System.out.println("Available after: " + availableRoom);
         return customerRoom;
     }
 
     public double checkOut(RoachColony colony, int day, Payment paymentType){
-        //caculate the total cost by multiplying the cost with number of days the customer stay
+        //calculate the total cost by multiplying the cost with number of days the customer stay
         double totalCost = colony.getRoom().cost() * day;
         System.out.println("This is the total cost: " + totalCost);
         paymentType.pay(totalCost);
@@ -58,6 +58,10 @@ public class RoachMotel {
         return availableRoom;
     }
 
+    @Override
+    public String toString() {
+        return "Roach Motel available room: " + getAvailableRoom();
+    }
 
     /*    @Override
     public String toString() {

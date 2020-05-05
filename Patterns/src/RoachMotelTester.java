@@ -49,7 +49,7 @@ public class RoachMotelTester {
         Room room6 = roachMotel.checkIn(rc6, "Regular", amenities3);
         System.out.println(roachMotel);
         if (room6 != null) {
-            System.out.println(room6.getDescription() + room6.cost());
+            System.out.println(room6.getDescription() + ", Cost: $" + room6.cost());
         }
         Room room7 = roachMotel.checkIn(rc7, "Suite", amenities3);
         System.out.println(roachMotel);
@@ -70,5 +70,40 @@ public class RoachMotelTester {
         System.out.println(rc1);
         System.out.println(rc2);
 
+        System.out.println(room8.getDescription() + ", Cost: $" + room8.cost());
+
+        RoachPal palRC3 = new RoachPal(rc3.getName(), "noice@gmail.com");
+        double cost3 = roachMotel.checkOut(rc3, 3, palRC3);*/
+
+        /////////////////////////////////////////////////////////////////////////////////
+
+        RoachMotel roachMotel = RoachMotel.getInstance();
+        roachMotel.createRoom();
+        System.out.println("initial rooms: " + roachMotel.getAvailableRoom());
+
+        RoachColony rc1 = new RoachColony("First colony", 100, 200);
+        ArrayList<String> amenities = new ArrayList<>();
+        amenities.add("Shower");
+        amenities.add("FoodBar");
+        amenities.add("RefillBar");
+        amenities.add("Spa");
+        Room room1 = roachMotel.checkIn(rc1, "Suite", amenities);
+        System.out.println(rc1);
+        rc1.party();
+        System.out.println(rc1);
+
+        RoachColony rc2 = new RoachColony("Second colony", 1000, 0.2);
+        ArrayList<String> amenities2 = new ArrayList<>();
+        amenities2.add("Shower");
+        Room room2 = roachMotel.checkIn(rc2, "Deluxe", amenities2);
+        System.out.println(rc2);
+        rc2.party();
+        System.out.println(rc2);
+
+        System.out.println();
+        System.out.println("Second colony check out:");
+        MasterRoach rc2Card = new MasterRoach("colony 1", "374", "0420850243", "05/28");
+        double costRC2 = roachMotel.checkOut(rc2,3, rc2Card);
+        System.out.println(room2.getDescription() + ", Cost: $" + costRC2);
     }
 }

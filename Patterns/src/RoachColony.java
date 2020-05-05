@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class RoachColony {
     private String name;
     private double initPopulation;
@@ -41,8 +43,30 @@ public class RoachColony {
         Room = room;
     }
 
+    public void party(){
+        // Gets the list of amenities
+        ArrayList<String> amenities = Room.getAmenitiesList();
+
+        // Checks if amenities list has a resistant shower
+        boolean hasShower = false;
+        for (String i: amenities){
+            if (i.equals("Shower")){
+                hasShower = true;
+            }
+        }
+        // Roach population is reduced by 25%
+        if (hasShower){
+            initPopulation = initPopulation - (initPopulation/4);
+        }
+        // Roach population is reduced by 50%
+        else{
+            initPopulation = initPopulation/2;
+        }
+    }
+
     @Override
     public String toString() {
-        return "Name: " + name + " Population: " + initPopulation + " Growth rate: " + growthRate;
+        return "Roach colony name: " + name + ", Initial Population: " + initPopulation +
+                ", Growth Rate: " + growthRate;
     }
 }

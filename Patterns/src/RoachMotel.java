@@ -4,8 +4,9 @@ import java.util.ArrayList;
 public class RoachMotel {
     private static RoachMotel instance = new RoachMotel();
     private ArrayList<Room> availableRoom = new ArrayList<>();
-    private ArrayList<Room> occupiedRoom = new ArrayList<>();
-    int NumberRooms = 5;
+    //private ArrayList<Room> occupiedRoom = new ArrayList<>();
+    private ArrayList<Room> occupiedOriginalRoom = new ArrayList<>();
+    private ArrayList<String> amenitiesList = new ArrayList<>();
 
     //constructor is private to prevent making new instances using new
     private RoachMotel(){}
@@ -24,6 +25,7 @@ public class RoachMotel {
     }
 
     /** Method to check customer into a room (factory pattern)**/
+    //Fixme: change the private instance room in customer to the new room and change the customer variable in new room to new customer
     public Room checkIn(RoachColony customer, String roomType,
                         ArrayList<String> amenitiesList) {
         Room customerRoom = null;
@@ -58,7 +60,10 @@ public class RoachMotel {
                 }
             }
             //Add the room that is assigned to a customer to the occupied list
-            occupiedRoom.add(customerRoom);
+            //occupiedRoom.add(customerRoom);
+            //the room that is add to occupiedOrig is the exact copy of available
+            //and not the customer one.
+            occupiedOriginalRoom.add(availableRoom.get(0));
             //remove the room that already assigned to a customer
             availableRoom.remove(0);
         }
@@ -67,7 +72,7 @@ public class RoachMotel {
             System.out.println("The motel is full!!!");
         }
         System.out.println("Available after: " + availableRoom);
-        System.out.println("Occupied Room: " + occupiedRoom);
+        System.out.println("Occupied Room: " + occupiedOriginalRoom);
         return customerRoom;
     }
 
@@ -75,7 +80,7 @@ public class RoachMotel {
         return availableRoom;
     }
 
-    @Override
+/*    @Override
     public String toString() {
         String roomNumList = "[";
         int startRoom = 100;
@@ -91,5 +96,5 @@ public class RoachMotel {
 
         return "RoachMotel{" + "roomList=" + roomList + ", Available rooms: "
                 + roomNumList + '}';
-    }
+    }*/
 }

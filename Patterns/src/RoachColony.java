@@ -2,6 +2,7 @@ public class RoachColony {
     private String name;
     private double initPopulation;
     private double growthRate;
+    private Room room;
 
     public RoachColony(){
         name = "Snow";

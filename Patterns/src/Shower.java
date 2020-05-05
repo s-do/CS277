@@ -13,7 +13,7 @@ public class Shower extends Amenities {
 
     @Override
     public String getDescription() {
-        return RoomType.getDescription() + "with Resistant Shower";
+        return RoomType.getDescription() + " with Resistant Shower";
     }
 
     @Override

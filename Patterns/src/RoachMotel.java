@@ -44,14 +44,13 @@ public class RoachMotel {
         return customerRoom;
     }
 
-    public double checkOut(RoachColony colony, int day, String paymentType){
-        double totalCost = colony.getRoom().cost();
-        System.out.println("This is the total cost: " + totalCost * day);
-        if (paymentType.equals("MasterRoach")){
-
-        }
-        else ()
-
+    public double checkOut(RoachColony colony, int day, Payment paymentType){
+        double totalCost = colony.getRoom().cost() * day;
+        System.out.println("This is the total cost: " + totalCost);
+        paymentType.pay(totalCost);
+        //add the room to the available room list.
+        availableRoom.add(colony.getRoomNumber());
+        return totalCost;
     }
 
     public ArrayList<Integer> getAvailableRoom() {

@@ -19,7 +19,7 @@ public class MasterRoach implements Payment{
     }
 
     @Override
-    public void pay(int amount) {
+    public void pay(double amount) {
         System.out.println("Payment from MasterRoach credit card: " + amount);
     }
 }

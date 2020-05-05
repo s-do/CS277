@@ -91,12 +91,15 @@ public class RoachMotelTester {
 
         RoachMotel roachMotel = RoachMotel.getInstance();
         roachMotel.createRoom();
+        System.out.println("initial rooms: " + roachMotel.getAvailableRoom());
         RoachColony rc1 = new RoachColony();
         RoachColony rc2 = new RoachColony();
         RoachColony rc3 = new RoachColony();
         RoachColony rc4 = new RoachColony();
         RoachColony rc5 = new RoachColony();
         RoachColony rc6 = new RoachColony();
+        RoachColony rc7 = new RoachColony();
+        RoachColony rc8 = new RoachColony();
 
         ArrayList<String> amenities2 = new ArrayList<>();
         amenities2.add("Shower");
@@ -124,5 +127,13 @@ public class RoachMotelTester {
         if (room6 != null) {
             System.out.println(room6.getDescription() + room6.cost());
         }
+        Room room7 = roachMotel.checkIn(rc7, "Suite", amenities3);
+
+        MasterRoach masterRC1 = new MasterRoach("Jack", "123", "1234567890", "04/21/12");
+        roachMotel.checkOut(rc1, 2, masterRC1);
+        System.out.println("available: " + roachMotel.getAvailableRoom());
+
+        Room room8 = roachMotel.checkIn(rc8, "Deluxe", amenities2);
+        System.out.println(room8.getDescription() + room8.cost());
     }
 }

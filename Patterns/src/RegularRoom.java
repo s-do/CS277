@@ -4,6 +4,10 @@ public class RegularRoom extends Room {
     public RegularRoom() {
         description = "Regular room with ok price";
     }
+/*    public RegularRoom(int number) {
+        roomNumber = number;
+        description = "Regular room with ok price";
+    }*/
 
     @Override
     public double cost() {

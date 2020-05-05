@@ -2,7 +2,8 @@ public class RoachColony {
     private String name;
     private double initPopulation;
     private double growthRate;
-    private Room room;
+    private int roomNumber;
+    private Room Room;
 
     public RoachColony(){
         name = "Snow";
@@ -14,5 +15,29 @@ public class RoachColony {
         name = roachName;
         initPopulation = population;
         growthRate = rate;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getRoomNumber() {
+        return roomNumber;
+    }
+
+    public void setRoomNumber(int roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+
+    public Room getRoom() {
+        return Room;
+    }
+
+    public void setRoom(Room room) {
+        Room = room;
     }
 }

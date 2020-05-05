@@ -3,10 +3,8 @@ import java.util.ArrayList;
  * there will be only one instance of it**/
 public class RoachMotel {
     private static RoachMotel instance = new RoachMotel();
-    private ArrayList<Room> availableRoom = new ArrayList<>();
-    //private ArrayList<Room> occupiedRoom = new ArrayList<>();
-    private ArrayList<Room> occupiedOriginalRoom = new ArrayList<>();
-    private ArrayList<String> amenitiesList = new ArrayList<>();
+    private ArrayList<Integer> availableRoom = new ArrayList<>();
+    private int roomCapacity = 5;
 
     //constructor is private to prevent making new instances using new
     private RoachMotel(){}
@@ -16,54 +14,25 @@ public class RoachMotel {
     }
 
     public void createRoom() {
-        availableRoom.add(new RegularRoom());
-        availableRoom.add(new RegularRoom());
-        availableRoom.add(new RegularRoom());
-        availableRoom.add(new RegularRoom());
-        availableRoom.add(new RegularRoom());
-
+        for (int i = 0; i < roomCapacity; i++) {
+            availableRoom.add(100 + i);
+        }
     }
 
     /** Method to check customer into a room (factory pattern)**/
-    //Fixme: change the private instance room in customer to the new room and change the customer variable in new room to new customer
     public Room checkIn(RoachColony customer, String roomType,
                         ArrayList<String> amenitiesList) {
+
         Room customerRoom = null;
+        RoomFactory roomFactory = new RoomFactory();
         //Only check in if there are available rooms ( or not empty)
         if (!availableRoom.isEmpty()) {
             //change the first room in the list to the type customer want
-            customerRoom = availableRoom.get(0);
-
-            if (roomType.equals("Suite")) {
-                customerRoom = new Suite();
-            }
-            else if (roomType.equals("Deluxe")){
-                customerRoom = new DeluxeRoom();
-            }
-            else if (roomType.equals("Regular")){
-                customerRoom =  new RegularRoom();
-            }
-
-            //iterate through the amenities and add them
-            for (String amenity : amenitiesList) {
-                if (amenity.equals("FoodBar")){
-                    customerRoom = new FoodBar(customerRoom);
-                }
-                else if (amenity.equals("Spa")){
-                    customerRoom = new Spa(customerRoom);
-                }
-                else if (amenity.equals("RefillBar")){
-                    customerRoom = new RefillBar(customerRoom);
-                }
-                else if (amenity.equals("Shower")) {
-                    customerRoom = new Shower(customerRoom);
-                }
-            }
-            //Add the room that is assigned to a customer to the occupied list
-            //occupiedRoom.add(customerRoom);
-            //the room that is add to occupiedOrig is the exact copy of available
-            //and not the customer one.
-            occupiedOriginalRoom.add(availableRoom.get(0));
+            customerRoom = roomFactory.makeRoom(roomType, amenitiesList);
+            //Set the amenities list in the newly created room to the one that customer pass in
+            customerRoom.setAmenitiesList(amenitiesList);
+            customer.setRoom(customerRoom);
+            customer.setRoomNumber(availableRoom.get(0));
             //remove the room that already assigned to a customer
             availableRoom.remove(0);
         }
@@ -72,15 +41,25 @@ public class RoachMotel {
             System.out.println("The motel is full!!!");
         }
         System.out.println("Available after: " + availableRoom);
-        System.out.println("Occupied Room: " + occupiedOriginalRoom);
         return customerRoom;
     }
 
-    public ArrayList<Room> getAvailableRoom() {
+    public double checkOut(RoachColony colony, int day, String paymentType){
+        double totalCost = colony.getRoom().cost();
+        System.out.println("This is the total cost: " + totalCost * day);
+        if (paymentType.equals("MasterRoach")){
+
+        }
+        else ()
+
+    }
+
+    public ArrayList<Integer> getAvailableRoom() {
         return availableRoom;
     }
 
-/*    @Override
+
+    /*    @Override
     public String toString() {
         String roomNumList = "[";
         int startRoom = 100;

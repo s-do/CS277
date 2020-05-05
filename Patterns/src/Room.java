@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /** An abstract class that represent a room**/
 
 public abstract class Room {
@@ -6,17 +8,30 @@ public abstract class Room {
 /*    static int roomNumberCount = 100;
     private int roomNumber = roomNumberCount;*/
     private RoachColony customer;
+    private ArrayList<String> amenitiesList;    //value at check-in
 
-    public Room() {
-        /*roomNumberCount = roomNumberCount + 1;*/
+    public Room (){
+
     }
 
-/*    public int getRoomNumber() {
-        return roomNumber;
+/*    public Room(int number) {
+        roomNumber = number;
+        *//*roomNumberCount = roomNumberCount + 1;*//*
     }*/
 
+    public ArrayList<String> getAmenitiesList() {
+        return amenitiesList;
+    }
+
+    public void setAmenitiesList(ArrayList<String> amenitiesList) {
+        this.amenitiesList = amenitiesList;
+    }
+
     public String getDescription() {
-        return description;
+        if (this != null) {
+            return description;
+        }
+        return "";
     }
 
     public abstract double cost();

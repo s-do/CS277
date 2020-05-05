@@ -13,6 +13,6 @@ public class RefillBar extends Amenities{
 
     @Override
     public String getDescription() {
-        return RoomType.getDescription() + "with Auto Refill Bar";
+        return RoomType.getDescription() + " with Auto Refill Bar";
     }
 }

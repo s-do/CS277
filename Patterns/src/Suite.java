@@ -8,4 +8,9 @@ public class Suite extends Room {
     public double cost() {
         return BASERATE;
     }
+
+    @Override
+    public String toString() {
+        return "Suite, give me all your money";
+    }
 }

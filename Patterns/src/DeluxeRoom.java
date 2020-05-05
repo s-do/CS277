@@ -8,4 +8,9 @@ public class DeluxeRoom extends Room {
     public double cost() {
         return BASERATE;
     }
+
+    @Override
+    public String toString() {
+        return "Deluxe room for more space";
+    }
 }

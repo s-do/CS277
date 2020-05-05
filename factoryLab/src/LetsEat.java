@@ -15,6 +15,7 @@ public class LetsEat {
 
         IceCream cone3;
         cone3 = dairyQueen.orderCone("Strawberry");
+        cone3.eat();
         System.out.println("Enjoying some " + cone3.getDescription() + " which costs " + cone3.cost());
         System.out.println("");
         //Add toping

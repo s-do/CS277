@@ -1,6 +1,6 @@
 public class Shower extends Amenities {
     protected Room RoomType;
-    private static final double COST = 5;
+    private static final double COST = 25;
 
     public Shower(Room room) {
         RoomType = room;
@@ -14,5 +14,10 @@ public class Shower extends Amenities {
     @Override
     public String getDescription() {
         return RoomType.getDescription() + "with Resistant Shower";
+    }
+
+    @Override
+    public String toString() {
+        return RoomType + " with Shower";
     }
 }

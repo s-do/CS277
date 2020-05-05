@@ -45,6 +45,7 @@ public class RoachMotel {
     }
 
     public double checkOut(RoachColony colony, int day, Payment paymentType){
+        //caculate the total cost by multiplying the cost with number of days the customer stay
         double totalCost = colony.getRoom().cost() * day;
         System.out.println("This is the total cost: " + totalCost);
         paymentType.pay(totalCost);

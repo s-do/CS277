@@ -135,5 +135,8 @@ public class RoachMotelTester {
 
         Room room8 = roachMotel.checkIn(rc8, "Deluxe", amenities2);
         System.out.println(room8.getDescription() + room8.cost());
+
+        RoachPal palRC3 = new RoachPal(rc3.getName(), "noice@gmail.com");
+        double cost3 = roachMotel.checkOut(rc3, 3, palRC3);
     }
 }

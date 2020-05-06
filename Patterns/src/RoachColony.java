@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class RoachColony {
     private String name;
-    private double initPopulation;
+    private int initPopulation;
     private double growthRate;
     private int roomNumber;
     private Room Room;
@@ -43,10 +43,11 @@ public class RoachColony {
         Room = room;
     }
 
+    //FIXME: make sure to round
     public void party(){
         // Gets the list of amenities
         ArrayList<String> amenities = Room.getAmenitiesList();
-
+        initPopulation = (int) Math.round(initPopulation + (initPopulation*growthRate));
         // Checks if amenities list has a resistant shower
         boolean hasShower = false;
         for (String i: amenities){

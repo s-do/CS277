@@ -57,11 +57,11 @@ public class RoachColony {
         }
         // Roach population is reduced by 25%
         if (hasShower){
-            initPopulation = initPopulation - (initPopulation/4);
+            initPopulation = (int) Math.round(initPopulation - (initPopulation/4));
         }
         // Roach population is reduced by 50%
         else{
-            initPopulation = initPopulation/2;
+            initPopulation = (int) Math.round(initPopulation/2);
         }
     }
 

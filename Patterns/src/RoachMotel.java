@@ -2,24 +2,42 @@ import java.util.ArrayList;
 /** This class use the singleton pattern which make sure
  * there will be only one instance of it**/
 public class RoachMotel {
+    /* instance of a roach motel*/
     private static RoachMotel instance = new RoachMotel();
+    /* list of rooms available in motel*/
     private ArrayList<Integer> availableRoom = new ArrayList<>();
+    /* number of rooms in motel */
     private int roomCapacity = 5;
 
-    //constructor is private to prevent making new instances using new
+    /**
+     * Constructor is private to prevent making new instances using new
+     */
     private RoachMotel(){}
 
+    /**
+     * Gets the instance of the roach motel
+     * @return roach motel instance
+     */
     public static RoachMotel getInstance() {
         return instance;
     }
 
+    /**
+     * Creates the rooms in the motel
+     */
     public void createRoom() {
         for (int i = 0; i < roomCapacity; i++) {
             availableRoom.add(100 + i);
         }
     }
 
-    /** Method to check customer into a room (factory pattern)**/
+    /**
+     * Method to check customer into a room (factory pattern)
+     * @param customer roach colony
+     * @param roomType type of room
+     * @param amenitiesList list of amenities roaches want
+     * @return room of colony with its type and amenities
+     */
     public Room checkIn(RoachColony customer, String roomType,
                         ArrayList<String> amenitiesList) {
 
@@ -44,9 +62,15 @@ public class RoachMotel {
         return customerRoom;
     }
 
+    /**
+     * Checks customer out of a room
+     * @param colony roach colony
+     * @param day number for days roaches stayed
+     * @param paymentType type of payment used
+     * @return total cost of colony's stay at motel
+     */
     public double checkOut(RoachColony colony, int day, Payment paymentType){
         //calculate the total cost by multiplying the cost with number of days the customer stay
-        //room1 = new FoodBar(room1);
         double totalCost = colony.getRoom().cost() * day;
         System.out.println("This is the total cost: " + totalCost);
         paymentType.pay(totalCost);
@@ -55,30 +79,20 @@ public class RoachMotel {
         return totalCost;
     }
 
+    /**
+     * Gets the list of available rooms
+     * @return list of available rooms
+     */
     public ArrayList<Integer> getAvailableRoom() {
         return availableRoom;
     }
 
+    /**
+     * String representation of roach motel
+     * @return string description of the motel's list of available rooms
+     */
     @Override
     public String toString() {
         return "Roach Motel available room: " + getAvailableRoom();
     }
-
-    /*    @Override
-    public String toString() {
-        String roomNumList = "[";
-        int startRoom = 100;
-        for (int i = 1; i < NumberRooms + 1; i++){
-            int roomNum = startRoom + i;
-            if (i == NumberRooms){
-                roomNumList += Integer.toString(roomNum) + "]";
-            }
-            else {
-                roomNumList += Integer.toString(roomNum) + ", ";
-            }
-        }
-
-        return "RoachMotel{" + "roomList=" + roomList + ", Available rooms: "
-                + roomNumList + '}';
-    }*/
 }

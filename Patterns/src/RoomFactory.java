@@ -1,7 +1,15 @@
 import java.util.ArrayList;
 
+/**
+ * A factory pattern that makes rooms
+ */
 public class RoomFactory extends RoomMakerAbstract{
-
+    /**
+     * Makes rooms for the hotel
+     * @param roomType type of room
+     * @param amenitiesList list of amenities
+     * @return type of room with amenities
+     */
     @Override
     public Room makeRoom(String roomType, ArrayList<String> amenitiesList) {
         Room customerRoom = null;

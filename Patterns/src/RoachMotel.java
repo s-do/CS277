@@ -93,6 +93,11 @@ public class RoachMotel {
      */
     @Override
     public String toString() {
-        return "Roach Motel available room: " + getAvailableRoom();
+        if (availableRoom.size() == 0){
+            return "Roach Motel available room: " + getAvailableRoom() + "\n NO VACANCY";
+        }
+        else{
+            return "Roach Motel available room: " + getAvailableRoom() + "\n VACANCY";
+        }
     }
 }

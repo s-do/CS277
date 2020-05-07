@@ -1,43 +1,52 @@
 Roach Motel available room: [100, 101, 102, 103, 104]
+ VACANCY
 initial rooms: [100, 101, 102, 103, 104]
 Suite with Resistant Shower with FoodBar with Auto Refill Bar with Spa cost: $160.0
 Roach colony name: First colony, Initial Population: 100, Growth Rate: 2.0
 After party:
 Roach colony name: First colony, Initial Population: 225, Growth Rate: 2.0
 Roach Motel available room: [101, 102, 103, 104]
+ VACANCY
 
 Deluxe Room with Resistant Shower Cost: $100.0
 Roach colony name: Second colony, Initial Population: 1000, Growth Rate: 0.2
 After party:
 Roach colony name: Second colony, Initial Population: 900, Growth Rate: 0.2
 Roach Motel available room: [102, 103, 104]
+ VACANCY
 
 Second colony check out:
 This is the total cost: 300.0
 Payment from MasterRoach credit card: 300.0
 Deluxe Room with Resistant Shower, Cost: $300.0
 Roach Motel available room: [102, 103, 104, 101]
+ VACANCY
 
 Regular room with FoodBar Cost: $60.0
 Roach colony name: Third colony, Initial Population: 300, Growth Rate: 0.3
 After party:
 Roach colony name: Third colony, Initial Population: 195, Growth Rate: 0.3
 Roach Motel available room: [103, 104, 101]
+ VACANCY
 
 Regular room with Auto Refill Bar Cost: $55.0
 Roach colony name: Fourth colony, Initial Population: 400, Growth Rate: 0.4
 Roach Motel available room: [104, 101]
+ VACANCY
 
 Deluxe Room with Auto Refill Bar Cost: $80.0
 Roach colony name: Fifth colony, Initial Population: 500, Growth Rate: 0.5
 Roach Motel available room: [101]
+ VACANCY
 
 Deluxe Room with Spa cost: $95.0
 Roach colony name: Sixth colony, Initial Population: 600, Growth Rate: 0.6
 Roach Motel available room: []
+ NO VACANCY
 
 The motel is full!!!
 Roach Motel available room: []
+ NO VACANCY
 
 Third colony check out:
 This is the total cost: 180.0
@@ -45,10 +54,13 @@ Payment from RoachPal: 180.0
 email: colony3@gmail.com
 Deluxe Room with Resistant Shower, Cost: $180.0
 Roach Motel available room: [102]
+ VACANCY
 
 Deluxe Room with Spa cost: $95.0
 Roach colony name: Seventh colony, Initial Population: 700, Growth Rate: 0.7
 Roach Motel available room: []
+ NO VACANCY
 
 The motel is full!!!
 Roach Motel available room: []
+ NO VACANCY

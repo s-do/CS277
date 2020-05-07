@@ -1,3 +1,11 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: Extends the amenities class.
+  The refill bar amenities that auto refill the room's bar with an extra cost of $5 per night.
+  Inputs: The room type
+  Outputs: Room with refill bar included
+*/
+
 public class RefillBar extends Amenities{
     /* Type of room */
     protected Room RoomType;

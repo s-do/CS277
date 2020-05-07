@@ -1,3 +1,11 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: A concrete class that represent a suit that extends from the room abstract class and
+  has a base cost of $100 and can be added with amenities. The most high-end room that the motel
+  offer which might drain your wallet if you stayed for a few nights.
+  Inputs: None
+  Outputs: None
+*/
 public class Suite extends Room {
     /* Price of a room per night */
     private static final double BASERATE = 100;

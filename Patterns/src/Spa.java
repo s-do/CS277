@@ -1,3 +1,11 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: Extends the amenities class.
+  Help customers relax after a long day and have a good time with the Spa feature at the cost of $20 per night.
+  Inputs: Room Type
+  Outputs: Room with Spa included
+*/
+
 public class Spa extends Amenities{
     /* Type of room */
     protected Room RoomType;

@@ -1,3 +1,10 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: A concrete class that represent a deluxe room that extends from the room abstract class and
+  has a base cost of $75 and can be added with amenities. An upgrade from the regular room.
+  Inputs: None
+  Outputs: None
+*/
 public class DeluxeRoom extends Room {
     /* Price of a room per night */
     private static final double BASERATE = 75;

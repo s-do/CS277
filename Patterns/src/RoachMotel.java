@@ -1,3 +1,10 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: Implement the Single pattern to create a single motel that allow check-in and checkout base
+  on the number of available rooms
+  Inputs: None
+  Outputs: None
+*/
 import java.util.ArrayList;
 /** This class use the singleton pattern which make sure
  * there will be only one instance of it**/
@@ -72,7 +79,7 @@ public class RoachMotel {
     public double checkOut(RoachColony colony, int day, Payment paymentType){
         //calculate the total cost by multiplying the cost with number of days the customer stay
         double totalCost = colony.getRoom().cost() * day;
-        System.out.println("This is the total cost: " + totalCost);
+        //System.out.println("This is the total cost: " + totalCost);
         paymentType.pay(totalCost);
         //add the room to the available room list.
         availableRoom.add(colony.getRoomNumber());

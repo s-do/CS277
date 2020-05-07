@@ -1,3 +1,9 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: MasterRoach allow customer to pay the motel cost the same way the credit card works.
+  Inputs: Name of owner, Card Number, Security Code, Date of Expiration
+  Outputs: None
+*/
 public class MasterRoach implements Payment{
     /* name on card */
     private String name;
@@ -52,4 +58,41 @@ public class MasterRoach implements Payment{
                 ", Card number: " + cardNum +
                 ", Date of expiry: " + dateOfExp;
     }
+
+    /**
+     * Return name of the card owner
+     **/
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Set the name on the card
+     * @param name name on card
+     **/
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Return the security code on the card
+     **/
+    public String getCvv() {
+        return cvv;
+    }
+
+    /**
+     * Return the card numbers
+     **/
+    public String getCardNum() {
+        return cardNum;
+    }
+
+    /**
+     * Return the expiration date of the card
+     **/
+    public String getDateOfExp() {
+        return dateOfExp;
+    }
+
 }

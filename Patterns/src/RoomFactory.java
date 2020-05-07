@@ -1,3 +1,9 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: Make the required room base on the customer request which is known at Runtime.
+  Inputs: Required room type, and the list of amenities to be added.
+  Outputs: The room required with or without amenities.
+*/
 import java.util.ArrayList;
 
 /**

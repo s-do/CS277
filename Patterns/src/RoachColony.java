@@ -1,3 +1,10 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: Represent the customer of roach motel who will be checking-in and out of the motel and staying at the motel.
+  Also use the strategy pattern to pay for the cost.
+  Inputs: Name, Population, Growth Rate.
+  Outputs: None
+*/
 import java.util.ArrayList;
 
 public class RoachColony {
@@ -75,14 +82,13 @@ public class RoachColony {
 
     /**
      * Sets the roach colony's room
-     * @return roach colony's room
      */
     public void setRoom(Room room) {
         Room = room;
     }
 
     /**
-     * Reduces the roach population whenever there is a party
+     * Increase then Reduces the roach population due to insecticide whenever there is a party
      */
     public void party(){
         // Gets the list of amenities

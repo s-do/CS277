@@ -1,3 +1,10 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: The interface implement factory pattern to create room base on input at Run time.
+  Inputs: None
+  Outputs: None
+*/
+
 import java.util.ArrayList;
 
 public abstract class RoomMakerAbstract {

@@ -1,3 +1,10 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: A concrete class that represent a regular price room that extends from the room abstract class and
+  has a base cost of $50 and can be added with amenities
+  Inputs: None
+  Outputs: None
+*/
 public class RegularRoom extends Room {
     /* Price of a room per night */
     private static final double BASERATE = 50;

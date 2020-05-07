@@ -1,3 +1,11 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: Extends the amenities class.
+  Add in food and drinks to the room with at the cost of $10 per night.
+  Inputs: The base room
+  Outputs: room type with food bar included
+*/
+
 public class FoodBar extends Amenities{
     /* Type of room */
     protected Room RoomType;

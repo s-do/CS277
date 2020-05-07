@@ -1,3 +1,10 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: Test the functionality of the motel including the factory patterns, and the strategy pattern. Also test
+  the Decorator pattern with the check-in method().
+  Inputs: None
+  Outputs: None
+*/
 import java.util.ArrayList;
 
 public class RoachMotelTester {

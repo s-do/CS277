@@ -1,3 +1,9 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: An abstract class that represents the idea of a room that has a description, and can be added with amenities
+  Inputs: None
+  Outputs: None
+*/
 import java.util.ArrayList;
 
 /** An abstract class that represent a room **/
@@ -10,7 +16,6 @@ public abstract class Room {
     /* list of amenities in room (value at check-in) */
     private ArrayList<String> amenitiesList;
 
-    //fixme: idk what to put here
     public Room (){
     }
 

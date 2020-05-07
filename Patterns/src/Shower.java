@@ -1,3 +1,11 @@
+/*Name: Selina Do and Long Nguyen
+  Date: 05/07/2020
+  Purpose: Extends the amenities class.
+  Prevent roach customers from dying with anti-insecticide shower which reduce the mortality rate to 25% at the cost
+  of $25 per night.
+  Inputs: Room Type
+  Outputs: room with shower included.
+*/
 public class Shower extends Amenities {
     /* Type of room */
     protected Room RoomType;
